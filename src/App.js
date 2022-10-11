@@ -8,8 +8,6 @@ import AboutMe from './components/AboutMe'
 import Proyects from "./components/Proyects";
 import Design from "./components/Design";
 
-
-
 function App() {
   return (
     <div className="App">
