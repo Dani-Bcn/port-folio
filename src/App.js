@@ -8,7 +8,7 @@ import AboutMe from './components/AboutMe'
 import Proyects from "./components/Proyects";
 import Design from "./components/Design";
 import EasyBrick from "./components/EasyBrick"
-
+import HomeWork from "./components/HomeWork"
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ function App() {
           <Route path="/proyects" element={<Proyects/>}/>  
           <Route path="/design" element={<Design/>}/>  
           <Route path="/easyBrick" element={<EasyBrick/>} />
+          <Route path="/homeWork" element={<HomeWork/>} />
       </Routes>
       <Footer/> 
     </div>  
