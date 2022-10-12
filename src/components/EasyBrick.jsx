@@ -1,13 +1,14 @@
-import React from 'react';
+import React , {useEffect,useState} from 'react';
 import {motion} from 'framer-motion'
 
 const EasyBrick = () => {
+
     return (
         <motion.div className='cardProyect'
             animate={{
-                opacity:[0,1]
-            }}
-        
+                opacity:[0,1],
+                x:[100,0]
+            }}        
         >        
             <div className='imgBrick'></div>                   
             <h2>Easy brick manager </h2>  
