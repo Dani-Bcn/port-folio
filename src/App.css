@@ -5,8 +5,7 @@
   text-decoration: none;
   font-family: 'Big Shoulders Inline Text', cursive;
   letter-spacing: 1px;
-  color:white;
-  
+  color:rgb(203, 203, 203);  
 }
 html{
   overflow: hidden;
@@ -35,7 +34,7 @@ html{
 .imgLinke{
   width: 30px;
   height: 30px;
-  background-image: url('./img/linke.png');
+  background-image: url('./img/linke.svg');
   background-size: 120% 120%;
   background-position: -3px -3px;
   background-repeat: no-repeat;
@@ -50,11 +49,19 @@ html{
 .imgGitHub{
   width: 25px;
   height: 25px;
-  background-image: url('./img/gitHub.png');
+  background-image: url('./img/gitHub.svg');
   background-size: 120% 120%;
   background-position: -3px -3px;
   background-repeat: no-repeat;
   border-radius: 100%;
+}
+.imgContact{
+  width: 25px;
+  height: 25px;
+  background-image: url('./img/email.svg');
+  background-size: 120% 120%;
+  background-position: -3px -3px;
+  background-repeat: no-repeat;
 }
 .container{
   width: 100vw;
@@ -77,6 +84,7 @@ html{
   width: 200px;
   height: 400px;
   background-image: url('./img/imgBrick.png');
+  background-color: white;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -90,6 +98,7 @@ html{
   width: 200px;
   height: 400px;
   background-image: url('./img/movil.png');
+  background-color: white;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   box-shadow: 0 0 10px black;
@@ -104,6 +113,7 @@ html{
   width: 200px;
   height: 400px;
   background-image: url('./img/home.png');
+  background-color: white;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   grid-column: 1;

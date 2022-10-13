@@ -11,9 +11,12 @@ import EasyBrick from "./components/EasyBrick"
 import HomeWork from "./components/HomeWork"
 import CloudsShips from "./components/CloudsShips"
 function App() {
+  const prop=(()=>{
+    const coco=true
+})
   return (
     <div className="App">
-      <Nav/> 
+      <Nav handleProps={prop}/> 
       <Routes>    
           <Route path="/" element={<Home/>}/> 
           <Route path="/aboutMe" element={<AboutMe/>}/>     

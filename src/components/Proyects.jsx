@@ -9,6 +9,7 @@ const Proyects = () => {
     const [displayLeft,setDisplayLeft]  = useState("flex")
     const [displayRight, setDisplayRight] = useState("flex")
     const [count, setCount] = useState(0)
+    
     useEffect(()=>{
         if(count > 1 ){
             setDisplayLeft("none")
