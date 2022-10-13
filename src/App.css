@@ -125,7 +125,7 @@ html{
   border-radius: 30px;
 }
 .imgShips{
-  width: 500px !important;
+  width: 500px;
   height: 400px;
   background-image: url('./img/imac.png');
   background-size: 100% 100%;
