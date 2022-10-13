@@ -10,13 +10,12 @@ import Design from "./components/Design";
 import EasyBrick from "./components/EasyBrick"
 import HomeWork from "./components/HomeWork"
 import CloudsShips from "./components/CloudsShips"
+import Contact from "./components/Contact"
 function App() {
-  const prop=(()=>{
-    const coco=true
-})
+
   return (
     <div className="App">
-      <Nav handleProps={prop}/> 
+      <Nav /> 
       <Routes>    
           <Route path="/" element={<Home/>}/> 
           <Route path="/aboutMe" element={<AboutMe/>}/>     
@@ -25,6 +24,7 @@ function App() {
           <Route path="/easyBrick" element={<EasyBrick/>} />
           <Route path="/homeWork" element={<HomeWork/>} />
            <Route path="/cloudsShips" element={<CloudsShips/>} />
+           <Route path="/contact" element={<Contact/>}/> 
       </Routes>
       <Footer/> 
     </div>  

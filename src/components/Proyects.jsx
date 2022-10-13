@@ -5,41 +5,49 @@ import HomeWork from './HomeWork'
 import CloudsShips from './CloudsShips'
 
 const Proyects = () => {
+
     const slide=[<CloudsShips/>,<EasyBrick/>,<HomeWork/>]
-    const [displayLeft,setDisplayLeft]  = useState("flex")
-    const [displayRight, setDisplayRight] = useState("flex")
+    const [displayLeft, setDisplayLeft]  = useState(1)
+    const [displayRight, setDisplayRight] = useState(1)
+    const [sumLeft, setSumLeft] = useState(1)
+    const [sumRight, setSumRight] = useState(1)
     const [count, setCount] = useState(0)
     
     useEffect(()=>{
         if(count > 1 ){
-            setDisplayLeft("none")
+            setDisplayLeft(0)
+            setSumRight(0)
         }else{
-            setDisplayLeft("flex")
+            setDisplayLeft(1)
+            setSumRight(1)
         }
         if(count < 1 ){
-            setDisplayRight("none")
+            setDisplayRight(0)
+            setSumLeft(0)
+          
         }else{
-            setDisplayRight("flex")
+            setDisplayRight(1)
+            setSumLeft(1)
         }       
     })   
         const slideRight=(()=>{
-        setCount(conut => count +1)
+        setCount(count => count + sumRight)
         }) 
         const slideLeft=(()=>{
-            setCount(conut => count -1)
+            setCount(count => count - sumLeft)
         })   
     return (     
         <div className='container'>   
             <span>
                 <motion.button className='btnLeft' onClick={()=>slideLeft()}
                     animate={{             
-                        display:["flex",displayRight],               
+                       opacity:displayRight,               
                     }}                   
                 ></motion.button>
                 {slide[count]}   
                 <motion.button className='btnRight' onClick={()=>slideRight()}
                     animate={{             
-                        display:["flex",displayLeft],
+                        opacity:displayLeft,
                     }}  
                 ></motion.button>
             </span>                  

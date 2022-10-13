@@ -13,7 +13,7 @@ const CloudsShips = () => {
             <div className='imgShips'></div>                   
             <h2>Clouds Ships</h2>  
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore enim eius, odio cumque error odit quasi quae repellat voluptatibus doloremque, minus reiciendis repudiandae dolor. Autem cum repellat dicta exercitationem natus.</p>                        
-            <a  target="blank" href="https://brickmanager.herokuapp.com/"><h2>Link App</h2></a>                                   
+            <a  target="blank" href="https://brickmanager.herokuapp.com/"><h4>Link App</h4></a>                                   
         </motion.div>         
     );
 }
