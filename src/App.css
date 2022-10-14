@@ -23,6 +23,7 @@ html{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 2;
 }
 .footer ul{
   width: 100vw;
@@ -33,11 +34,17 @@ html{
 }
 .imgLinke{
   width: 30px;
-  height: 30px;
+  height: 35px;
   background-image: url('./img/linke.svg');
   background-size: 120% 120%;
   background-position: -3px -3px;
   background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.imgLinke:hover{
+  transition: 0.5s;
+  rotate: 10deg;
+  box-shadow: 0 0 10px rgb(124, 124, 124);
 }
 .imgDomest{
   width: 30px;
@@ -45,6 +52,11 @@ html{
   background-image: url('./img/domestika.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.imgDomest:hover{
+  transition: 0.5s;
+  rotate: 10deg;
+  box-shadow: 0 0 10px rgb(124, 124, 124);
 }
 .imgGitHub{
   width: 25px;
@@ -55,6 +67,11 @@ html{
   background-repeat: no-repeat;
   border-radius: 100%;
 }
+.imgGitHub:hover{
+  transition: 0.5s;
+  rotate: 10deg;
+  box-shadow: 0 0 10px rgb(124, 124, 124);
+}
 .imgContact{
   width: 25px;
   height: 25px;
@@ -62,6 +79,11 @@ html{
   background-size: 120% 120%;
   background-position: -2px -3px;
   background-repeat: no-repeat;
+}
+.imgContact:hover{
+  transition: 0.5s;
+  rotate: 10deg;
+  box-shadow: 0 0 10px rgb(124, 124, 124);
 }
 .container{
   width: 100vw;
@@ -164,6 +186,7 @@ textarea {
 }
 button{
  width: 215px;
+ color:rgb(30, 30, 30)
 }
 .iconAvatar{
   width: 30px;
@@ -172,7 +195,6 @@ button{
   background-size: 100% 100%;
   margin: 0 40px;
 }
-
 .iconEmail{
   width: 30px;
   height: 30px;
@@ -187,10 +209,12 @@ button{
   background-size: 100% 100%;
   margin: 0 40px;
 }
-input{
-  border-radius: 5px;
-  padding: 5px;
-  width: 200px;
+.iconPoint{
+  width: 30px;
+  height: 25px;
+  background-image: url('./img/iconPoint.png');
+  background-size: 100% 100%;
+  margin: 0 40px;
 }
 .containerStart{
   width: 60vw;
@@ -259,19 +283,24 @@ span{
   border: none;
   cursor: pointer;
 }
-.movil{
-  grid-template-columns: 2;
-  grid-template-rows: 2;
-  background-color: red;
-}
-.containerSection{
-  width: 90vw;
-  height: 40vh;
+.containerAbout{
+  width: 40vw;
+  height: 45vh;
   margin: 0 auto;
   text-align: start;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.overText{
+  position:absolute;
+  width: 110vw;
+  height: 600px;
+  top: 400px;
+  background-image: url('./img/overText.png'); 
+  background-size: 100% 100%;
+  z-index: 1;
 }
 .containerUnderLine{
   width: 60vw;
@@ -282,6 +311,7 @@ span{
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  z-index: -1;
 }
 .underLine{
   width: 80px;
@@ -291,9 +321,22 @@ span{
   z-index: -1;
   border-radius: 5px;
 }
-
+.arrows{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url('./img/flechas.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: -15px 10px;
+}
 @media (max-width:400px){
-  
+  .containerAbout{
+    width: 90vw;
+  }
+  .rotate{
+    display: flex;
+  }
   .imgBrick{
     display: none;
    }   
@@ -310,7 +353,7 @@ span{
     justify-content: center;
    }
    .container{
-    height: 75vh;
+    height: 83vh;
   }
   .containerStart{
     width: 85vw;
@@ -326,6 +369,13 @@ span{
   }
 }
 @media (min-width:400px){
+  .containerAbout{
+    width: 80vw;
+  }
+  
+  .rotate{
+    display: none;
+  }
   .form ul li{
     margin: 20px 0;
   }
@@ -362,7 +412,6 @@ span{
   .containerCenter{
     width: 68vw;
     margin-top: -35px;
-
   }
   .containerEnd{
     width: 64vw;
@@ -370,6 +419,9 @@ span{
   } 
 }
 @media (min-width:900px){
+  .rotate{
+    display: none;
+  }
   .cardProyect{
     height: 60vh;
    }

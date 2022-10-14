@@ -1,29 +1,40 @@
 import React from 'react';
 import {motion} from 'framer-motion'
 
-const Contact = () => {
- 
-
-
- 
-
-   
+const Contact = () => {   
     return (     
-        <motion.div className='container'       
-        animate={{
-                    y:[200, 0],
-                    scale:[2,1],
-                    opacity:[0,1]
-                }}
-            > 
-                
+        <motion.div className='container'>                 
             <div className='contact'>                                     
-                <span><div className='iconAvatar'></div><h2>Daniel Pérez Aranda</h2> </span>
-                <span><div className='iconEmail'></div><h2>nneodani@gmail.com</h2></span>
-                <span><div className='iconTel'></div><h2>651110553</h2> </span>   
-                <a className='btnSearch' href="mailto:nnedani@gmail.com"><button>Enviar correo</button></a>   
-            </div>  
-           
+                <motion.span
+                    animate={{
+                        opacity:[0,1],
+                        x:[-200,0]
+                    }}
+                ><div className='iconAvatar'></div><h2>Daniel Pérez Aranda</h2> </motion.span>
+                <motion.span
+                   animate={{
+                    opacity:[0,1],
+                    x:[200,0]
+                }}
+                ><div className='iconEmail'></div><h2>nneodani@gmail.com</h2></motion.span>
+                <motion.span
+                   animate={{
+                    opacity:[0,1],
+                    x:[-200,0]
+                }}
+                ><div className='iconTel'></div><h2>651110553</h2> </motion.span>   
+                <motion.span
+                   animate={{
+                    opacity:[0,1],
+                    x:[200,0]
+                }}><div className='iconPoint'></div><h2>Montgat (BCN)</h2> </motion.span>   
+                <motion.a className='btnSearch' href="mailto:nneodani@gmail.com"
+                   animate={{
+                    opacity:[0,1],
+                    y:[200,0]
+                }}
+                ><button>Enviar correo</button></motion.a>   
+            </div>             
         </motion.div>      
     )
 }

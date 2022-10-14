@@ -50,7 +50,18 @@ const Proyects = () => {
                         opacity:displayLeft,
                     }}  
                 ></motion.button>
-            </span>                  
+            </span>             
+            <span className='rotate'><h3>Puedes girar tu terminal </h3><motion.div className='arrows'
+                animate={{
+                    rotate:360,
+
+                }}
+                transition={{
+                    duration:20,
+                    repeat:Infinity,
+                    ease: "linear" 
+                }}
+            ></motion.div></span>
         </div>       
     )
 }
