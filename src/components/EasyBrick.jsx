@@ -10,7 +10,15 @@ const EasyBrick = () => {
                 x:[100,0]
             }}        
         >        
-            <div className='imgBrick'></div>                   
+            <motion.div className='imgBrick'
+               drag
+               dragConstraints={{
+                 top: -1,
+                 left: -1,
+                 right: 1,
+                 bottom: 1,
+               }}
+            ></motion.div>                   
             <h2>Easy brick manager </h2>  
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore enim eius, odio cumque error odit quasi quae repellat voluptatibus doloremque, minus reiciendis repudiandae dolor. Autem cum repellat dicta exercitationem natus.</p>                        
             <a  target="blank" href="https://brickmanager.herokuapp.com/"><h2>Link App</h2></a>                          
