@@ -14,6 +14,19 @@ html{
   background-color: rgb(35, 35, 35);
   background-size: 100% 100%;
 }
+.pageHome{
+  font-size: 200px;
+  color: rgba(21, 21, 21, 0);
+  background-color: rgba(167, 74, 74, 0);
+  background-image: url('./img/imgCode.png');  
+  background-size: 75% 200%;
+  background-clip: text; 
+  transition: 1s;
+}
+.pageHome:hover{
+  background-position: -300px;
+  transition: 1s;
+}
 .nav {
     display: fixed;
 }
@@ -25,6 +38,33 @@ html{
   align-items: center;
   z-index: 2;
 }
+.containerImages{
+  width: 90%;
+  height: 70%;
+  overflow: hidden;
+  position: fixed;
+  align-items: center;
+  display: flex;
+}
+.innerImages{
+  display: flex;
+  align-items: center;
+  align-items: center;
+    cursor: grab;
+}
+.innerImages img{
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  pointer-events: none;
+  border-radius: 10px;
+
+}
+.item{
+ min-height: 40rem;
+ min-width: 40rem;
+}
+
 .footer ul{
   width: 100vw;
   height: 10vh;
@@ -286,6 +326,7 @@ span{
 }
 .overText h1{
   opacity: 0;
+  z-index: -1;
 }
 .containerUnderLine{
   width: 60vw;
@@ -298,14 +339,14 @@ span{
   margin: 0 auto;
   z-index: -1;
 }
-.underLine{
+.underLine{ 
   width: 80px;
   height: 100px;
   padding: 20px 5px ;
-  background-color: rgb(106, 106, 106);
+  background-color: rgb(106, 106, 106);  
   z-index: -1;
-  border-radius: 5px;
-}
+  border-radius: 5px; 
+} 
 .arrows{
   display: block;
   width: 50px;
@@ -315,10 +356,23 @@ span{
   background-size: 100% 100%;
   margin: -15px 10px;
 }
+.progress-bar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+}
+
 
 /* responsive */
 
 @media (max-width:400px){
+  .pageHome{
+    font-size: 180px;
+  }
   .containerAbout{
     width: 90vw;
   }
@@ -342,6 +396,7 @@ span{
    }
    .container{
     height: 83vh;
+    flex-direction: column;
   }
   .containerStart{
     width: 85vw;
@@ -357,6 +412,9 @@ span{
   }
 }
 @media (min-width:400px){
+  .pageHome{
+    font-size: 170px;
+  }
   .containerAbout{
     width: 80vw;
   }  
@@ -409,6 +467,9 @@ span{
   } 
 }
 @media (min-width:900px){
+  .pageHome{
+    font-size: 230px;
+  }
   .rotate{
     display: none;
   }

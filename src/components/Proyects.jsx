@@ -53,8 +53,7 @@ const Proyects = () => {
             </span>             
             <span className='rotate'><h3>Puedes girar tu terminal </h3><motion.div className='arrows'
                 animate={{
-                    rotate:360,
-
+                    rotate:360
                 }}
                 transition={{
                     duration:20,
