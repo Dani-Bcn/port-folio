@@ -8,7 +8,7 @@ const AboutMe = () => {
                 <motion.div className='overText'
                 animate={{
                    y:[0,50],
-                   scaleY:[1.5,0]                }}
+                   scaleY:[1.5,0]}}
                 transition={{
                     duration:5,
                     ease:"linear"

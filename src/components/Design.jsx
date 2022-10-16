@@ -5,32 +5,34 @@ import Images from  './Images'
 
 
 
-const Design = () => {
-  
-  
+const Design = () => {  
+
+const scale =((event)=>{
+
+    console.log(event.target.id)
+})
+
     return (
-     <div className='container'>
+     <div id="container" className='container'>      
         <motion.div className='containerImages'>
-            <motion.div drag="x" className='innerImages'
+            <motion.div  drag="x" className='innerImages'
             dragConstraints={{
                 right:0,
-                left:-4000
+                left:-3000
                 }}>
-                {Images.map((img)=>{
+                {Images.map((img,i)=>{
                     return (
-                        <motion.div className='img'                    
+                        <motion.div  key={img} draggable="false" className='img'                    
                         initial={{opacity:0}}
                         whileInView={{      
-                            opacity:[0,0,1]  ,
+                            opacity:[0,0,1],
                             scale:[0.5,1]                                    
                           }}
                           transition={{
-                            delay:0.3
+                            delay:0.1
                           }}>
-                            <motion.img src={img} alt="images"
-                                whileTap={{
-                                    scale:2
-                                }}
+                            <motion.img  id={i} src={img} alt="images"
+                               onClick={(event)=>scale(event)}
                             ></motion.img>
                         </motion.div>
                     )
@@ -38,8 +40,7 @@ const Design = () => {
             </motion.div>
         </motion.div>
      </div>
-
     )
-}    
+}  
 
 export default Design;

@@ -39,32 +39,29 @@ html{
   z-index: 2;
 }
 .containerImages{
-  width: 90%;
-  height: 70%;
+  width:90vw;
+  height: 90vh;
   overflow: hidden;
   position: fixed;
-  align-items: center;
+  align-items:flex-start;
   display: flex;
 }
 .innerImages{
+  height: 500px;
   display: flex;
-  align-items: center;
-  align-items: center;
-    cursor: grab;
+  cursor: grab;
 }
 .innerImages img{
   width: 300px;
   height: 200px;
   margin: 20px;
-  pointer-events: none;
   border-radius: 10px;
-
+  pointer-events: none;
 }
 .item{
  min-height: 40rem;
  min-width: 40rem;
 }
-
 .footer ul{
   width: 100vw;
   height: 10vh;
@@ -366,10 +363,19 @@ span{
   transform-origin: 0%;
 }
 
-
 /* responsive */
 
 @media (max-width:400px){
+  .innerImages{
+    height: 620px;
+    flex-direction: column;
+    overflow-y: scroll;   
+  }
+  .containerImages{
+    height: 85vh;
+    margin-top: 90px;
+    flex-direction: column;
+  }
   .pageHome{
     font-size: 180px;
   }
@@ -395,7 +401,7 @@ span{
     justify-content: center;
    }
    .container{
-    height: 83vh;
+    height: 87vh;
     flex-direction: column;
   }
   .containerStart{
@@ -409,9 +415,13 @@ span{
   .containerEnd{
     width: 80vw;
     margin-top: -59px;
+    overflow: scroll;
   }
 }
 @media (min-width:400px){
+  .containerImages{
+    flex-direction: row;
+  }
   .pageHome{
     font-size: 170px;
   }
@@ -467,6 +477,10 @@ span{
   } 
 }
 @media (min-width:900px){
+  .containerImages{
+    flex-direction: row;
+    align-items: center;
+  }
   .pageHome{
     font-size: 230px;
   }
