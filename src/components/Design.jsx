@@ -13,12 +13,12 @@ const scale =((event)=>{
 })
 
     return (
-     <div id="container" className='container'>      
+     <div className='container'>      
         <motion.div className='containerImages'>
-            <motion.div  drag="x" className='innerImages'
+            <motion.div  className='innerImages'
             dragConstraints={{
                 right:0,
-                left:-3000
+                left:-4000
                 }}>
                 {Images.map((img,i)=>{
                     return (
