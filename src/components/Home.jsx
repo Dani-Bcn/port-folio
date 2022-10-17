@@ -22,8 +22,10 @@ const coco =setInterval(()=>{
 
 function myFunction() {
 
+    
      document.getElementById("page").style.backgroundPositionX=`${top * Math.random()*2}px`; 
     document.getElementById("page").style.backgroundPositionY=`${top*-10}px`; 
+
    
 }
     return (

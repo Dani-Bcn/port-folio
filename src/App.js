@@ -4,7 +4,9 @@ import './App.css'
 import Home from './components/Home'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import AboutMe from './components/AboutMe'
+import PageAboutMe from './components/PageAboutMe'
+import AboutMe1 from './components/AboutMe1'
+import AboutMe2 from './components/AboutMe2'
 import Proyects from "./components/Proyects";
 import Design from "./components/Design";
 import EasyBrick from "./components/EasyBrick"
@@ -16,16 +18,18 @@ function App() {
   return (
     <div className="App">
       <Nav /> 
-      <Routes>    
-          <Route path="/" element={<Home/>}/> 
-          <Route path="/aboutMe" element={<AboutMe/>}/>     
-          <Route path="/proyects" element={<Proyects/>}/>  
-          <Route path="/design" element={<Design/>}/>  
-          <Route path="/easyBrick" element={<EasyBrick/>} />
-          <Route path="/homeWork" element={<HomeWork/>} />
-           <Route path="/cloudsShips" element={<CloudsShips/>} />
-           <Route path="/contact" element={<Contact/>}/> 
-      </Routes>
+        <Routes>    
+            <Route path="/" element={<Home/>}/> 
+            <Route path="/pageAboutMe" element={<PageAboutMe/>}/>  
+            <Route path="/aboutMe1" element={<AboutMe1/>}/>   
+            <Route path="/aboutMe2" element={<AboutMe2/>}/>   
+            <Route path="/proyects" element={<Proyects/>}/>  
+            <Route path="/design" element={<Design/>}/>  
+            <Route path="/easyBrick" element={<EasyBrick/>} />
+            <Route path="/homeWork" element={<HomeWork/>} />
+            <Route path="/cloudsShips" element={<CloudsShips/>} />
+            <Route path="/contact" element={<Contact/>}/> 
+        </Routes>
       <Footer/> 
     </div>  
   );

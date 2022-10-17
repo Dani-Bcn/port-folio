@@ -1,11 +1,9 @@
-import React , {useState,useE }from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import {motion,LayoutGroup} from 'framer-motion'
+import React , {useState}from 'react';
+import { NavLink} from 'react-router-dom';
+import {motion} from 'framer-motion'
 
     const Nav = () => {    
-    const [x,setX] = useState("start")  
     const [changeClass,setChangeClass] = useState("containerEnd")
-    const [coco, setCoco] = useState(false)
     const spring = {
         type: "spring",
         stiffness: 300,
@@ -15,7 +13,7 @@ import {motion,LayoutGroup} from 'framer-motion'
     return (
         <motion.div className='nav'>                 
             <ul>
-                {<NavLink  onMouseOver={()=>setChangeClass("containerStart")}  to="/AboutMe"><h3>Sobre mi</h3></NavLink>} 
+                {<NavLink  onMouseOver={()=>setChangeClass("containerStart")}  to="/PageAboutMe"><h3>Sobre mi</h3></NavLink>} 
                 {<NavLink  onMouseOver={()=>setChangeClass("containerCenter")} to="/Proyects"><h3>Proyectos</h3></NavLink>}  
                 {<NavLink   onMouseOver={()=>setChangeClass("containerEnd")} to="/Design"><h3>Diseños 3D</h3></NavLink>}                                    
             </ul>

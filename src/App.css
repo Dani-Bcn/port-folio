@@ -301,16 +301,29 @@ span{
 .containerAbout{
   width: 40vw;
   height: 45vh;
-  margin: 0 auto;
-  text-align: start;
+}
+.cardDeveloper{
+  width: 70vw;
+  height: 40vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin:  0 auto;
+  justify-content:space-evenly;
   align-items: center;
+}
+.cardDeveloper h1{
+  width: 300px;
+  height: 300px;
+}
+.imgDeveloper{
+  width: 400px;
+  height: 300px;
+  background-image: url('./img/developer.jpg');
+  background-size: 100% 100%;
+
 }
 .overText{
   position:absolute;
-  width: 110vw;
+  width: 80vw;
   height: 320px;
   top: 450px;
   background-image: url('./img/overText.png'); 
