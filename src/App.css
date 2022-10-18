@@ -8,6 +8,7 @@
   color:rgb(199, 199, 199);  
   font-size: 20px;
 }
+ ::-webkit-scrollbar {display: none;}/*Ocultar scroll */
 html{
   width: 100vw;
   height: 100vh;
@@ -298,41 +299,46 @@ span{
   border: none;
   cursor: pointer;
 }
-.containerAbout{
-  width: 40vw;
-  height: 45vh;
-}
-.cardDeveloper{
-  width: 70vw;
-  height: 40vh;
+.pagesAbout{
+  width: 100vw;
   display: flex;
-  margin:  0 auto;
-  justify-content:space-evenly;
+}
+.containerAbout{
+  margin: 50px auto;
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
-.cardDeveloper h1{
-  width: 300px;
-  height: 300px;
+.aboutMe{
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
 }
-.imgDeveloper{
-  width: 400px;
-  height: 300px;
-  background-image: url('./img/developer.jpg');
-  background-size: 100% 100%;
-
+.aboutMe2{
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
 }
-.overText{
-  position:absolute;
-  width: 80vw;
-  height: 320px;
-  top: 450px;
-  background-image: url('./img/overText.png'); 
-  background-size: 100% 100%;
-  z-index: 1;
+.aboutMe h1{
+  width: 200px;
+  height: 200px;
 }
-.overText h1{
-  opacity: 0;
-  z-index: -1;
+.imgAboutMe1{
+  width: 250px;
+  height: 250px;
 }
 .containerUnderLine{
   width: 60vw;
@@ -375,6 +381,10 @@ span{
 /* responsive */
 
 @media (max-width:400px){
+
+  .imgDeveloper{
+    width: 200px;
+  }
   .innerImages{
     height: 620px;
     flex-direction: column;
@@ -429,18 +439,19 @@ span{
   }
 }
 @media (min-width:400px){
+
   .containerImages{
     height: 85vh;
     margin-top: 90px;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow:scroll;
   }
   .pageHome{
     font-size: 140px;
   }
   .containerAbout{
     width: 80vw;
-  }  
+  }  g
   .overText{
    top:350px;
   }

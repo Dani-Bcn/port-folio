@@ -1,7 +1,7 @@
 import React , {useEffect,useState} from 'react';
 import {motion} from 'framer-motion'
 
-const CloudsShips = () => {
+const CloudsShips = () => { 
 
     return (
         <motion.div className='cardProyect'

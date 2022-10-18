@@ -1,20 +1,19 @@
 import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
 
-const AboutMe2 = () => {
+const AboutMe3 = () => {
     const [on, setON] = useState(false)
     useEffect(()=>{
         setTimeout(()=>{
             setON(true)
-        },4000)
+        },8000)
         setTimeout(()=>{
             setON(false)
-        },7500)
+        },10500)
     },[])
-    console.log(on)
-    return (    
-        <div className='pagesAbout'>  
-           <AnimatePresence  >
+    return (       
+        <div className='pagesAbout'> 
+            <AnimatePresence>
             {on &&
             <motion.div className='aboutMe'
             initial={{ opacity: 0 ,x:500}}
@@ -23,13 +22,12 @@ const AboutMe2 = () => {
             transition={{duration:0.5}}
             >               
                 <div className='imgAboutMe1'></div>
-                <h1>...hasta que decidí dar un paso adelante, dejé mi puesto de trabajo, en el cual llevaba 6 años y me aventuré a conseguir mis metas</h1>
+                <h1>...Yo, que apenas habia estudiado en mi vida y mis trabajos fueron practimente físicos, me adentré en un mundo totalmente desconocido...me apunté aun botcamp </h1>
             </motion.div> 
-            }           
-        </AnimatePresence>     
-        </div>             
-     
+            }          
+           </AnimatePresence>    
+        </div>      
     )
 }
 
-export default AboutMe2;
+export default AboutMe3;

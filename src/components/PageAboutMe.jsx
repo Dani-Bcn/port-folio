@@ -1,13 +1,20 @@
 import React from 'react';
 import {motion} from 'framer-motion'
 import AboutMe1 from './AboutMe1';
-
+import AboutMe2 from './AboutMe2';
+import AboutMe3 from './AboutMe3';
+import AboutMe4 from './AboutMe4';
+import AboutMe5 from './AboutMe5';
 
 const PageAboutMe = () => {
     return (
-        <motion.div className='container'>
-               <AboutMe1></AboutMe1>
-        </motion.div>
+    <div className='containerAbout'>
+        <AboutMe1/>
+        <AboutMe2/>
+        <AboutMe3/>
+        <AboutMe4/>
+        <AboutMe5/>
+    </div>
     );
 }
 export default PageAboutMe;
