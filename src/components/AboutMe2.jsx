@@ -2,16 +2,15 @@ import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
 
 const AboutMe2 = () => {
-    const [on, setON] = useState(false)
+    const [on, setOn] = useState(false)
     useEffect(()=>{
         setTimeout(()=>{
-            setON(true)
+            setOn(true)
         },4000)
         setTimeout(()=>{
-            setON(false)
+            setOn(false)
         },8000)
     },[])
-    console.log(on)
     return (    
         <div className='pagesAbout'>  
            <AnimatePresence  >

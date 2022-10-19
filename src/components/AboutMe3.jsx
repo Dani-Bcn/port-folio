@@ -25,7 +25,8 @@ const AboutMe3 = () => {
                 <h1>...Yo, que apenas habia estudiado en mi vida y mis trabajos fueron practimente físicos, me adentré en un mundo totalmente desconocido...me inscribí en Ironhack </h1>
             </motion.div> 
             }          
-           </AnimatePresence>    
+           </AnimatePresence> 
+             
         </div>      
     )
 }

@@ -1,8 +1,11 @@
 import React , {useEffect,useState} from 'react';
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom';
 
 const CloudsShips = () => { 
-
+const handleLink=(()=>{
+ 
+})
     return (
         <motion.div className='cardProyect'
             animate={{
@@ -18,10 +21,19 @@ const CloudsShips = () => {
                  right: 1,
                  bottom: 1,
                }}
-            ></motion.div>                   
-            <h2>Ships clouds</h2>  
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore enim eius, odio cumque error odit quasi quae repellat voluptatibus doloremque, minus reiciendis repudiandae dolor. Autem cum repellat dicta exercitationem natus.</p>                        
-            <a  target="blank" href="https://brickmanager.herokuapp.com/"><h4>Link App</h4></a>                                   
+               onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='http://google.com';
+                }}            
+          >
+            </motion.div>  
+            <div className='textProyect'>
+                <h1>Ships clouds</h1>  
+                <h3>Juego de naves para escritorio en 2d</h3>        
+                <h3>Tecnologias utilizadas</h3>            
+                <h3>HTML5, CSS, Canvas, JavaScript</h3>             
+            </div>   
+          
         </motion.div>         
     );
 }

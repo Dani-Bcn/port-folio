@@ -2,13 +2,13 @@ import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
 
 const AboutMe4 = () => {
-    const [on, setON] = useState(false)
+    const [on, setOn] = useState(false)
     useEffect(()=>{
         setTimeout(()=>{
-            setON(true)
+            setOn(true)
         },12000)
         setTimeout(()=>{
-            setON(false)
+            setOn(false)
         },16500)
     },[])
     return (       
@@ -26,6 +26,7 @@ const AboutMe4 = () => {
                     </motion.div> 
                 }          
            </AnimatePresence>    
+      
         </div>      
     )
 }

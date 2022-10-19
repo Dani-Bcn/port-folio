@@ -2,17 +2,18 @@ import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
 
 const AboutMe5 = () => {
-    const [on, setON] = useState(false)
+    const [on, setOn] = useState(false)
     useEffect(()=>{
         setTimeout(()=>{
-            setON(true)
+            setOn(true)
         },17000)
         setTimeout(()=>{
-            setON(false)
+            setOn(false)
         },21000)
     },[])
+  
     return (       
-        <div className='pagesAbout'> 
+        <div className='pagesAbout'>        
             <AnimatePresence>
                 {on &&
                     <motion.div className='aboutMe'
@@ -23,9 +24,13 @@ const AboutMe5 = () => {
                     >               
                         <div className='imgAboutMe5'></div>
                         <h1>... al final después de haber sacrificado muchas cosas, conseguí graduarme... pero un momento esto solo es el principio, aún no he conseguido todos mis objetivos...</h1>
+                
                     </motion.div> 
-                }          
+                    
+                }   
+                    
            </AnimatePresence>    
+         
         </div>      
     )
 }

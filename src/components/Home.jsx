@@ -38,7 +38,7 @@ function myFunction() {
                 transition={{
                     duration:3,
                 }}
-            >Daniel Pérez Aranda</motion.h1>
+            >En construcción !</motion.h1>
         </div>
     );
 }
