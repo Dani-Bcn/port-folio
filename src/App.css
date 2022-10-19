@@ -49,16 +49,24 @@ html{
   justify-content: center;
   cursor: grab;
   flex-wrap: wrap;
+  background-position: 300px;
 }
+
 .innerImages img{
   width: 300px;
   height: 200px;
   margin: 20px;
-  border-radius: 10px;
+  transition: 0.5s;
+  border: 1px solid rgb(44, 44, 44);
 }
+.innerImages img:hover{
+  border: 1px solid rgb(255, 255, 255);
+  transition: 0.5s;
+ }
 .item{
  min-height: 40rem;
  min-width: 40rem;
+ background-position: 300px;
 }
 .footer ul{
   width: 100vw;
@@ -333,12 +341,41 @@ span{
   margin: auto;
 }
 .aboutMe h1{
-  width: 200px;
+  width: 400px;
   height: 200px;
 }
 .imgAboutMe1{
-  width: 250px;
+  width: 450px;
   height: 250px;
+  background-image:url('./img/developer.png');
+  background-size: 100% 100%;
+}
+.imgAboutMe2{
+  width: 400px;
+  height: 250px;
+  background-image:url('./img/metas.png');
+  background-size: 100% 100%;
+}
+.imgAboutMe3{
+  width: 300px;
+  height: 200px;
+  background-image:url('./img/ironhack.png');
+  background-size: 110% 100%;
+  background-repeat: no-repeat;
+}
+.imgAboutMe4{
+  width: 400px;
+  height: 300px;
+  background-image:url('./img/rusa.png');
+  background-size: 110% 100%;
+  background-repeat: no-repeat;
+}
+.imgAboutMe5{
+  width: 400px;
+  height: 300px;
+  background-image:url('./img/certificado.png');
+  background-size: 110% 100%;
+  background-repeat: no-repeat;
 }
 .containerUnderLine{
   width: 60vw;

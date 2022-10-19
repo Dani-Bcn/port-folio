@@ -6,10 +6,10 @@ const AboutMe3 = () => {
     useEffect(()=>{
         setTimeout(()=>{
             setON(true)
-        },8000)
+        },8500)
         setTimeout(()=>{
             setON(false)
-        },10500)
+        },11500)
     },[])
     return (       
         <div className='pagesAbout'> 
@@ -21,8 +21,8 @@ const AboutMe3 = () => {
             exit={{ opacity: 0 ,x:-500}}
             transition={{duration:0.5}}
             >               
-                <div className='imgAboutMe1'></div>
-                <h1>...Yo, que apenas habia estudiado en mi vida y mis trabajos fueron practimente físicos, me adentré en un mundo totalmente desconocido...me apunté aun botcamp </h1>
+                <div className='imgAboutMe3'></div>
+                <h1>...Yo, que apenas habia estudiado en mi vida y mis trabajos fueron practimente físicos, me adentré en un mundo totalmente desconocido...me inscribí en Ironhack </h1>
             </motion.div> 
             }          
            </AnimatePresence>    

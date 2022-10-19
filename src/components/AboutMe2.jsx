@@ -9,24 +9,24 @@ const AboutMe2 = () => {
         },4000)
         setTimeout(()=>{
             setON(false)
-        },7500)
+        },8000)
     },[])
     console.log(on)
     return (    
         <div className='pagesAbout'>  
            <AnimatePresence  >
-            {on &&
-            <motion.div className='aboutMe'
-            initial={{ opacity: 0 ,x:500}}
-            animate={{ opacity: 1 ,x:0}}
-            exit={{ opacity: 0 ,x:-500}}
-            transition={{duration:0.5}}
-            >               
-                <div className='imgAboutMe1'></div>
-                <h1>...hasta que decidí dar un paso adelante, dejé mi puesto de trabajo, en el cual llevaba 6 años y me aventuré a conseguir mis metas</h1>
-            </motion.div> 
-            }           
-        </AnimatePresence>     
+                {on &&
+                <motion.div className='aboutMe'
+                    initial={{ opacity: 0 ,x:500}}
+                    animate={{ opacity: 1 ,x:0}}
+                    exit={{ opacity: 0 ,x:-500}}
+                    transition={{duration:0.5}}
+                >               
+                    <div className='imgAboutMe2'></div>
+                    <h1>...hasta que decidí dar un paso adelante, dejé mi puesto de trabajo, en el cual llevaba 6 años y me aventuré a conseguir mis metas...</h1>
+                </motion.div> 
+                }           
+            </AnimatePresence>     
         </div>             
      
     )

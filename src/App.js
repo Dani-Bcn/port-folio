@@ -10,6 +10,7 @@ import AboutMe2 from './components/AboutMe2'
 import AboutMe3 from './components/AboutMe3'
 import AboutMe4 from './components/AboutMe4'
 import AboutMe5 from './components/AboutMe5'
+import AboutMe6 from './components/AboutMe6'
 import Proyects from "./components/Proyects";
 import Design from "./components/Design";
 import EasyBrick from "./components/EasyBrick"
@@ -29,6 +30,7 @@ function App() {
             <Route path="/aboutMe3" element={<AboutMe3/>}/>   
             <Route path="/aboutMe4" element={<AboutMe4/>}/>   
             <Route path="/aboutMe5" element={<AboutMe5/>}/>  
+            <Route path="/aboutMe6" element={<AboutMe6/>}/> 
             <Route path="/proyects" element={<Proyects/>}/>  
             <Route path="/design" element={<Design/>}/>  
             <Route path="/easyBrick" element={<EasyBrick/>} />
