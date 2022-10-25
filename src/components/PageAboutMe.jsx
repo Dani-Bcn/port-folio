@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion'
 import AboutMe1 from './AboutMe1';
 import AboutMe2 from './AboutMe2';
@@ -8,6 +8,7 @@ import AboutMe5 from './AboutMe5';
 import AboutMe6 from './AboutMe6';
 
 const PageAboutMe = () => {
+ 
     return (
         <div className='containerAbout'>
             <AboutMe1/>

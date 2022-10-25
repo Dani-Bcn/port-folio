@@ -17,6 +17,7 @@ import EasyBrick from "./components/EasyBrick"
 import HomeWork from "./components/HomeWork"
 import CloudsShips from "./components/CloudsShips"
 import Contact from "./components/Contact"
+
 function App() {
 
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/homeWork" element={<HomeWork/>} />
             <Route path="/cloudsShips" element={<CloudsShips/>} />
             <Route path="/contact" element={<Contact/>}/> 
+      
         </Routes>
       <Footer/> 
     </div>  

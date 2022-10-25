@@ -26,7 +26,7 @@ const EasyBrick = () => {
                 <h1>Homerwork for kids</h1> 
                 <h3>App creada para gestionar las tereas de casa de los niños.</h3>
                 <h3>Tecnologias utilizadas</h3>    
-                <h3>HTML5, CSS ,JavaScript,React, Next.js, Mongosse, Mongosse </h3>
+                <h3>HTML5, CSS ,JavaScript,React, React router dom, Node.js, Express, MongoDB, Mongoose, Postman </h3>
             </div>         
         </motion.div>         
     );

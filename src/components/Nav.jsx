@@ -1,6 +1,6 @@
-import React , {useState}from 'react';
-import { NavLink} from 'react-router-dom';
-import {motion} from 'framer-motion'
+import React , { useState }from 'react';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
     const Nav = () => {    
     const [changeClass,setChangeClass] = useState("containerEnd")
@@ -8,8 +8,7 @@ import {motion} from 'framer-motion'
         type: "spring",
         stiffness: 300,
         damping:20
-      };    
-     
+      };         
     return (
         <motion.div className='nav'>                 
             <ul>

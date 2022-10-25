@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
 import ImgLogos from  './ImgLogos'
+import ImgLogosDesign from  './ImgLogosDesign'
 
 const AboutMe6 = () => {
     const [on, setOn] = useState(false)    
@@ -23,7 +24,7 @@ const AboutMe6 = () => {
                         animate={{ opacity: 1 ,x:0}}                      
                         transition={{duration:0.5}}
                     >               
-                        <h1>Tecnologias aprendidas</h1>     
+                        <h2>Tecnologías aprendidas</h2>     
                         {ImgLogos.map((e)=>{
                         return(
                             <div >
@@ -31,7 +32,15 @@ const AboutMe6 = () => {
                             </div>                        
                        )
                     })}          
-                  </motion.div> 
+                      <h2>Diseño y animación web</h2>   
+                      {ImgLogosDesign.map((e)=>{
+                        return(
+                            <div >
+                                <img className='imgLogos' src={e}></img>    
+                            </div>                        
+                       )
+                    })}                             
+                  </motion.div>                   
                 }            
            </AnimatePresence>    
         </div>      

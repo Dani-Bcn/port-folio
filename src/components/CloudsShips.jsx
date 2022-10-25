@@ -31,7 +31,7 @@ const handleLink=(()=>{
                 <h1>Ships clouds</h1>  
                 <h3>Juego de naves para escritorio en 2d</h3>        
                 <h3>Tecnologias utilizadas</h3>            
-                <h3>HTML5, CSS, Canvas, JavaScript</h3>             
+                <h3>HTML5, CSS, Canvas, JavaScript, Handlebars</h3>             
             </div>   
           
         </motion.div>         

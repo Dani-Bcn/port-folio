@@ -28,7 +28,7 @@ const scale =((event)=>{
                           transition={{
                             delay:0.1
                           }}>
-                            <motion.img  id={i} src={img} alt="images"
+                            <motion.img  id={i} src={img} alt="images" className='imagesDesign'
                                onClick={(event)=>scale(event)}
                             ></motion.img>
                         </motion.div>
