@@ -5,8 +5,7 @@
   text-decoration: none;
   font-family: 'Big Shoulders Inline Text', cursive;
   letter-spacing: 1px;
-  color:rgb(199, 199, 199);  
-  
+  color:rgb(199, 199, 199);    
 }
  ::-webkit-scrollbar {display: none;}/*Ocultar scroll */
 
@@ -20,10 +19,13 @@ html{
   font-size: 150px;
   color: rgba(21, 21, 21, 0);
   background-color: rgba(167, 74, 74, 0);
-  background-image: url('./img/imgCode.png');  
-  background-size: 75% 200%;
+  background-image: url('./img/fondo2.png');  
+  background-size: 100% 100%;
   background-clip: text; 
   transition: 1s;
+}
+.App{
+height: 100vh;
 }
 .pageHome:hover{
   background-position: -300px;
@@ -62,7 +64,7 @@ html{
 .innerImages img:hover{
   border: 1px solid rgb(255, 255, 255);
   transition: 0.5s;
- }
+}
 .item{
  min-height: 40rem;
  min-width: 40rem;
@@ -154,7 +156,7 @@ html{
   align-items:start;
   text-align: start;
   flex-direction: column;
-  margin: 0 50px;
+  margin: 0 30px;
 }
 .imgBrick{
   width: 400px;
@@ -167,6 +169,7 @@ html{
   grid-row: 1/4;
   margin: auto;
   border-radius: 30px;
+  cursor: pointer;
 }
 .imgHome{
   width: 400px;
@@ -179,6 +182,7 @@ html{
   grid-row: 1/4;
   margin: auto;
   border-radius: 30px;
+  cursor: pointer;
 }
 .imgShips{
   width: 500px;
@@ -222,7 +226,8 @@ textarea {
 }
 button{
  width: 215px;
- color:rgb(30, 30, 30)
+ color:rgb(30, 30, 30);
+ padding: 5px;
 }
 .iconAvatar{
   width: 30px;
@@ -303,10 +308,6 @@ span{
   border: none;
   cursor: pointer;
 }
-.pagesAbout{
-  width: 100vw;
-  display: flex;
-}
 .containerAbout{
   margin: 50px auto;
   width: 60vw;
@@ -325,6 +326,8 @@ span{
   align-items: center;
   justify-content: space-around;
   margin: auto;
+  background: red;
+  overflow: scroll;
 }
 .aboutMe2{
   width: 90vw;
@@ -338,18 +341,20 @@ span{
 }
 .aboutMe h1{
   width: 300px;
-  height: 250px;
-  font-size: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imgAboutMe1{
   width: 300px;
-  height: 250px;
+  height: 200px;
   background-image:url('./img/developer.png');
   background-size: 100% 100%;
 }
 .imgAboutMe2{
   width: 300px;
-  height: 250px;
+  height: 200px;
   background-image:url('./img/metas.png');
   background-size: 100% 100%;
 }
@@ -357,22 +362,49 @@ span{
   width: 300px;
   height: 200px;
   background-image:url('./img/ironhack.png');
-  background-size: 110% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imgAboutMe4{
   width: 300px;
-  height: 300px;
+  height: 200px;
   background-image:url('./img/rusa.png');
-  background-size: 110% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .imgAboutMe5{
   width: 300px;
-  height: 300px;
+  height: 200px;
   background-image:url('./img/certificado.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.techno{
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin:  auto;  
+}
+.techno h1{
+  width: 1000px;
+  text-align: center;
+  margin: 20px;
+}
+.imgLogos{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.html{
+  width: 100px;
+  height: 100px;
 }
 .containerUnderLine{
   width: 60vw;
@@ -411,11 +443,11 @@ span{
   background: red;
   transform-origin: 0%;
 }
-
 /* responsive */
-
-@media (max-width:400px){ 
-
+@media (max-width:400px){   
+.aboutMe{
+  height: 600px;
+}
   .textProyect {
     width: 240px;
     margin: 0 20px;
@@ -478,7 +510,9 @@ span{
   }
 }
 @media (min-width:400px){
-
+  .aboutMe{
+    height: 350px;
+  }
   .containerImages{
     height: 85vh;
     margin-top: 90px;
@@ -541,8 +575,11 @@ span{
   } 
 }
 @media (min-width:900px){
+  .techno{
+    width: 80vw;
+  }
   .aboutMe{
-    height: 60vh;
+    height: 500px;
   }
   
   .pageHome{

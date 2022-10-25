@@ -22,7 +22,7 @@ const AboutMe2 = () => {
                     transition={{duration:0.5}}
                 >               
                     <div className='imgAboutMe2'></div>
-                    <h1>...hasta que decidí dar un paso adelante, dejé mi puesto de trabajo, en el cual llevaba 6 años y me aventuré a conseguir mis metas...</h1>
+                    <h1>...hasta que decidí dar un paso adelante, dejé mi puesto de trabajo, en el cual llevaba 6 años y me aventuré a conseguir mis objetivos...</h1>
                 </motion.div> 
                 }           
             </AnimatePresence>     

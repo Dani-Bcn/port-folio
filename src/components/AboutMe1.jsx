@@ -22,8 +22,7 @@ const AboutMe1 = () => {
                         transition={{duration:0.5}}
                     >               
                         <div className='imgAboutMe1'></div>
-                        <h1>Apasionado del diseño gráfico y de la programación, cada vez más ocupaba mi tiempo de ocio en aprender a programar y a diseñar... </h1>
-
+                        <h1>Apasionado del diseño gráfico y de la programación, cada vez más ocupaba mi tiempo de ocio en aprender a programar y a diseñar...</h1>
                     </motion.div> 
                 }          
             </AnimatePresence>    

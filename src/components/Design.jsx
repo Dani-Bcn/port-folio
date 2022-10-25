@@ -3,12 +3,9 @@ import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion'
 import Images from  './Images'
 
-
-
-const Design = () => {  
-
+const Design = () => { 
+    
 const scale =((event)=>{
-
     console.log(event.target.id)
 })
 
@@ -22,7 +19,7 @@ const scale =((event)=>{
                 }}>
                 {Images.map((img,i)=>{
                     return (
-                        <motion.div  key={img} draggable="false" className='img'                    
+                        <motion.div  key={img} draggable="false"                   
                         initial={{opacity:0}}
                         whileInView={{      
                             opacity:[0,0,1],

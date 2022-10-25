@@ -13,9 +13,9 @@ import {motion} from 'framer-motion'
     return (
         <motion.div className='nav'>                 
             <ul>
-                {<NavLink  onMouseOver={()=>setChangeClass("containerStart")}  to="/PageAboutMe"><h3>Sobre mi</h3></NavLink>} 
-                {<NavLink  onMouseOver={()=>setChangeClass("containerCenter")} to="/Proyects"><h3>Proyectos</h3></NavLink>}  
-                {<NavLink   onMouseOver={()=>setChangeClass("containerEnd")} to="/Design"><h3>Diseños 3D</h3></NavLink>}                                    
+                {<NavLink  onMouseOver={()=>setChangeClass("containerStart")}  to="/PageAboutMe"><h2>Sobre mi</h2></NavLink>} 
+                {<NavLink  onMouseOver={()=>setChangeClass("containerCenter")} to="/Proyects"><h2>Proyectos</h2></NavLink>}  
+                {<NavLink   onMouseOver={()=>setChangeClass("containerEnd")} to="/Design"><h2>Diseños 3D</h2></NavLink>}                                    
             </ul>
             {console.log(changeClass)}
             <motion.div   className={changeClass}>           

@@ -1,15 +1,18 @@
 import React,{useState,useEffect} from 'react';
 import{motion,AnimatePresence} from 'framer-motion'
+import ImgLogos from  './ImgLogos'
 
 const AboutMe6 = () => {
-    const [on, setOn] = useState(false)
+    const [on, setOn] = useState(false)    
+    const [count, setCount] = useState(0)
+    const [active, setActive] = useState([false,false]) 
     useEffect(()=>{
         setTimeout(()=>{
-            setOn(true)
+            setOn(true)        
         },21500)
         // setTimeout(()=>{
         //     setOn(false)
-        // },24000)
+        // },24000)       
     },[])
     return (       
         <div className='pagesAbout'> 
@@ -20,17 +23,18 @@ const AboutMe6 = () => {
                         animate={{ opacity: 1 ,x:0}}                      
                         transition={{duration:0.5}}
                     >               
-                        <h1>Tecnologias aprendidas</h1>
-                        <motion.div className='line'
-                            animate={{
-                                
-                            }}
-                        ></motion.div>
-                    </motion.div> 
-                }          
+                        <h1>Tecnologias aprendidas</h1>     
+                        {ImgLogos.map((e)=>{
+                        return(
+                            <div >
+                                <img className='imgLogos' src={e}></img>    
+                            </div>                        
+                       )
+                    })}          
+                  </motion.div> 
+                }            
            </AnimatePresence>    
         </div>      
     )
 }
-
 export default AboutMe6;
