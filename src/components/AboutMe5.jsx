@@ -23,14 +23,10 @@ const AboutMe5 = () => {
                         transition={{duration:0.5}}
                     >               
                         <div className='imgAboutMe5'></div>
-                        <h1>...al final después de haber sacrificado muchas cosas, conseguí graduarme... pero un momento esto solo es el principio, aún no he conseguido todos mis objetivos...</h1>
-                
-                    </motion.div> 
-                    
-                }   
-                    
-           </AnimatePresence>    
-         
+                        <h1>...al final después de haber sacrificado durante varios meses mucha vida social, conseguí graduarme... pero un momento esto solo es el principio, aún no he conseguido todos mis objetivos...</h1>            
+                    </motion.div>                     
+                }                       
+           </AnimatePresence>          
         </div>      
     )
 }

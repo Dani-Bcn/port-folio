@@ -22,7 +22,7 @@ const AboutMe4 = () => {
                         transition={{duration:0.5}}
                     >               
                         <div className='imgAboutMe4'></div>
-                        <h1>...las emociones oscilaban como en montaña rusa.. miedos, fustraciones, dudas, pero tambien...muchas satisfactiones a diferentes niveles...</h1>
+                        <h1>...las emociones oscilaban como en montaña rusa.. miedos, fustraciones, dudas, pero tambien...muchas satisfacciones a diferentes niveles...</h1>
                     </motion.div> 
                 }          
            </AnimatePresence>    

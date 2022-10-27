@@ -10,7 +10,7 @@ import oficina from '../img/assets/oficina.jpg'
 import plantaCasa from '../img/assets/plantaCasa.jpg'
 import pueblo from '../img/assets/pueblo.jpg'
 import robot from '../img/assets/robot.jpg'
-import robotica from '../img/assets/robotica.jpg'
+import robotica from '../img/assets/robotica.png'
 
 export default [
     armario,

@@ -4,9 +4,25 @@ import {motion} from 'framer-motion'
 import Images from  './Images'
 
 const Design = () => { 
-    
-const scale =((event)=>{
-    console.log(event.target.id)
+    const[id, setId] = useState(0)
+    const links =[
+        "DesignRoom",        
+        "DesignBug",
+        "Designkitchen",
+        "Designkitchen2",
+        "DesignRoom2",
+        "DesignIphone",
+        "DesignBathroom",
+        "DesignOfice",
+        "DesignMagneto",
+        "DesignStair",
+        "DesignVillage",
+        "DesignRobot",
+        "DesignCyborg",
+    ]
+
+const scale =((event)=>{    
+    setId(event.target.id)
 })
 
     return (
@@ -28,9 +44,14 @@ const scale =((event)=>{
                           transition={{
                             delay:0.1
                           }}>
-                            <motion.img  id={i} src={img} alt="images" className='imagesDesign'
-                               onClick={(event)=>scale(event)}
-                            ></motion.img>
+                          
+                              <a href={`/${links[id]}`}><motion.img  id={i} src={img} alt="images" className='imagesDesign'
+                   
+                              onClick={(event)=>scale(event)}
+                               
+                            ></motion.img></a>
+                  
+                          
                         </motion.div>
                     )
                 })}

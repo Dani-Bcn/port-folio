@@ -17,7 +17,19 @@ import EasyBrick from "./components/EasyBrick"
 import HomeWork from "./components/HomeWork"
 import CloudsShips from "./components/CloudsShips"
 import Contact from "./components/Contact"
-
+import DesignRoom from "./components/DesignRoom"
+import DesignRoom2 from "./components/DesignRoom2"
+import DesignBug from "./components/DesignBug"
+import DesignKitchen from "./components/DesignKitchen"
+import DesignKitchen2 from "./components/DesignKitchen2"
+import DesignIphone from "./components/DesignIphone"
+import DesignBathroom from "./components/DesignBathroom"
+import DesignOfice from "./components/DesignOfice";
+import DesignMagneto from "./components/DesignMagneto";
+import DesignStair from "./components/DesignStair";
+import DesignVillage from "./components/DesignVillage"
+import DesignRobot from "./components/DesignRobot"
+import DesignCyborg from "./components/DesignCyborg"
 function App() {
 
   return (
@@ -37,8 +49,20 @@ function App() {
             <Route path="/easyBrick" element={<EasyBrick/>} />
             <Route path="/homeWork" element={<HomeWork/>} />
             <Route path="/cloudsShips" element={<CloudsShips/>} />
-            <Route path="/contact" element={<Contact/>}/> 
-      
+            <Route path="/contact" element={<Contact/>}/>       
+            <Route path="/designRoom" element={<DesignRoom/>}/>  
+            <Route path="/designRoom2" element={<DesignRoom2/>}/>   
+            <Route path="/designBug" element={<DesignBug/>}/>            
+            <Route path="/designKitchen" element={<DesignKitchen/>}/>   
+            <Route path="/designKitchen2" element={<DesignKitchen2/>}/> 
+            <Route path='/designIphone' element ={<DesignIphone/>}/> 
+            <Route path="/designBathroom" element ={<DesignBathroom/>}/>
+            <Route path="/designOfice" element={<DesignOfice/>}/>
+            <Route path="/designMagneto" element={<DesignMagneto/>}/>
+            <Route path="/Designstair" element ={<DesignStair/>}/>
+            <Route path="/designVillage" element={<DesignVillage/>}/>
+            <Route path="/designRobot" element={<DesignRobot/>}/>
+            <Route path="/designCyborg" element={<DesignCyborg/>}/>
         </Routes>
       <Footer/> 
     </div>  

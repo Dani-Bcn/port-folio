@@ -22,7 +22,7 @@ const AboutMe3 = () => {
             transition={{duration:0.5}}
             >               
                 <div className='imgAboutMe3'></div>
-                <h1>...me inscribí en Ironhack y descubrí un mundo totalmente distinto para mi..</h1>
+                <h1>...me inscribí en Ironhack y descubrí un mundo totalmente diferente para mi lleno de nuevos retos..</h1>
             </motion.div> 
             }          
            </AnimatePresence> 
