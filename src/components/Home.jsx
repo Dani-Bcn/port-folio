@@ -9,9 +9,10 @@ const Home = () => {
                 <h4>Choose your teme</h4>
             </div>
             <div className='container-secction'>
-                <div className='secction'>
-                    <h1>Commit</h1> 
-                </div>
+              
+                    <div className='cards-secction'>Professional</div>
+                    <div className='cards-secction'>Minimalist</div>
+                    <div className='cards-secction'>Future</div>
             </div>
         </div>
     );
