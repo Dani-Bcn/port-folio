@@ -9,7 +9,7 @@ const Home = () => {
                 <h4>Choose your teme</h4>
             </div>
             <div className='container-secction'>
-                <div></div>
+                <div className='secction'></div>
             </div>
         </div>
     );
