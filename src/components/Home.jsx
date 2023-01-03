@@ -9,7 +9,9 @@ const Home = () => {
                 <h4>Choose your teme</h4>
             </div>
             <div className='container-secction'>
-                <div className='secction'></div>
+                <div className='secction'>
+                    <h1>Commit</h1>
+                </div>
             </div>
         </div>
     );
