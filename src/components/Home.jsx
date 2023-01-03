@@ -8,7 +8,9 @@ const Home = () => {
                 <h3>I'm Dani</h3>
                 <h4>Choose your teme</h4>
             </div>
-            <div className='container-secction'></div>
+            <div className='container-secction'>
+                <div></div>
+            </div>
         </div>
     );
 }
