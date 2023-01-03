@@ -10,7 +10,7 @@ const Home = () => {
             </div>
             <div className='container-secction'>
                 <div className='secction'>
-                    <h1>Commit</h1>
+                    <h1>Commit</h1> 
                 </div>
             </div>
         </div>
