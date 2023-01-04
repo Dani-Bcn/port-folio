@@ -8,36 +8,21 @@ const Home = () => {
     const cardsSecction = ["Pofessional", "Crazy", "Minimlist"]
 
     return (
-        <m.div className='container-pages'
-            animate={{
-                opacity: [0, 0, 1],
-                transition: {
-                    duration: 1,
-                    ease: "circOut"
-                }
-            }}
-            exit={{
-                opacity: [1, 0], transition: {
-                    duration: 0.5,
-                    delay: 2.5,
-                    ease: "circOut"
-                }
-            }}
-        >
+        <m.div className='container-pages' >
             <m.div className='container-text'>
                 {
                     workdsTitle.map((e, i) => (
                         <m.h3 key={i}
-                            animate={{
-                                opacity: [0, 1],
+                           whileInView={{
+                                opacity: [0,0, 1],
                                 height: [0, 75],
                                 transition: {
-                                    delay: 1,
-                                    duration: 1,
+                                    duration: 1.5,
                                     ease: "circOut"
                                 }
                             }}
                             exit={{
+                                opacity: [1, 0, 0],
                                 height: [75, 0]
                             }}
                         >{e}</m.h3>
@@ -48,20 +33,20 @@ const Home = () => {
                 {
                     cardsSecction.map((e, i) => (
                         <m.div key={i} className='cards-secction' onClick={() => navigate("/future")}
-                            animate={{
-                                opacity: [0,  1],
-                                x: [300, 0],
+                           whileInView={{
+                            opacity:[0,1],
+                                x: [50, 0],
                                 transition: {
-                                    delay: 2 + i / 2,
+                                    delay: 1.5 + i / 2.5,
                                     duration: 1.5,
                                     ease: "circOut"
                                 }
                             }}
                             exit={{
-                                opacity: [1,0],
-                                x: [0, -500],
+                                opacity: [1, 0],
+                                x: [0, -50],
                                 transition: {
-                                    delay: 1+i / 2,
+                                    delay: 0.5 + i / 2.5,
                                     duration: 1,
                                     ease: "circIn"
                                 }
