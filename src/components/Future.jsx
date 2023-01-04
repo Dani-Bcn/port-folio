@@ -4,7 +4,24 @@ import { motion as m} from 'framer-motion'
 
 const Future = () => {
     const navigate = useNavigate()
-    const handleSecction=["Aboutme","Proyects","Skills","Design 3d"]
+    const handleSecction=["About me","Proyects","Skills","Design 3d"]
+ 
+    const linksPages=((i)=>{
+        switch(i){
+            case 0:{
+               {navigate("/aboutfuture")}
+            }
+            case 1:{
+                {navigate("/proyectsfuture")}
+             }
+             case 2:{
+                {navigate("/skillsfuture")}
+             }
+             case 3:{
+                {navigate("/designfuture")}
+             }
+        }
+    })
     return (
         <m.div className='container-pages' >
             <div className='container-text' id='text-future'>
@@ -28,7 +45,7 @@ const Future = () => {
             <m.div className='container-secction' id='secction-future'>
                {
                 handleSecction.map((e,i)=>(
-                    <m.div key={i} className='cards-secction-future' onClick={() => navigate("/")}
+                    <m.div key={i} className='cards-secction-future' onClick={() => linksPages(i)}
                        whileInView={{
                             opacity:[0,1],
                             clipPath:["polygon(0% 0%, 0% 0%, 40% 100%, 40% 100%)","polygon(0% 0%, 60% 0%, 100% 100%, 40% 100%)"],
