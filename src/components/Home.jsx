@@ -14,7 +14,7 @@ const Home = () => {
                     workdsTitle.map((e, i) => (
                         <m.h3 key={i}
                            whileInView={{
-                                opacity: [0,0, 1],
+                                opacity: [0, 1],
                                 height: [0, 75],
                                 transition: {
                                     duration: 1.5,
@@ -37,18 +37,18 @@ const Home = () => {
                             opacity:[0,1],
                                 x: [50, 0],
                                 transition: {
-                                    delay: 1.5 + i / 2.5,
+                                    delay: 0.5 + i / 2.5,
                                     duration: 1.5,
                                     ease: "circOut"
                                 }
                             }}
                             exit={{
                                 opacity: [1, 0],
-                                x: [0, -50],
+                                x: [0, -100],
                                 transition: {
-                                    delay: 0.5 + i / 2.5,
-                                    duration: 1,
-                                    ease: "circIn"
+                                    delay: 0.3 + i / 3,
+                                    duration: 0.5,
+                                    ease: "circOut"
                                 }
                             }}
                         >{e}</m.div>
