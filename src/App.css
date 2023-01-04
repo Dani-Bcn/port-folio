@@ -3,7 +3,12 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    overflow: hidden;
 }
+html{
+    background-color: rgb(255, 238, 228);
+}
+
 h1,h2,h3,h4{
     text-align: center;
 }
@@ -19,8 +24,8 @@ h1,h2,h3,h4{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-column: 2/13;
-    grid-row: 2/5;
+    grid-column: 1/14;
+    grid-row: 2/6;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -35,7 +40,6 @@ h1,h2,h3,h4{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-family: 'Rationale', sans-serif;
 }
 .cards-secction{
     width: 100%;
@@ -45,24 +49,63 @@ h1,h2,h3,h4{
     justify-content: center;
     background-image: linear-gradient(to right,rgb(255, 203, 203),rgba(189, 189, 255, 0));
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Page furure */
+#secction-future{ 
+    font-family: 'Mulish', sans-serif;
+    grid-row: 4/13;
+}
+#text-future{
+    font-family: 'Mulish', sans-serif;
+    grid-row: 1/4;
+}
+.cards-secction-future{
+    width: 100%;
+    height: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 128, 0, 0.333);
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 @media  (min-width: 400px) {
     .container-secction{
         grid-row: 8/13;
         flex-direction: row;
+    
     }
     .cards-secction{
         width: 25%;
-        height: 100%;     
-        clip-path: polygon(100% 25%, 100% 100%, 0 100%, 0 25%, 50% 0);
-        background-image: linear-gradient(rgb(255, 203, 203),rgba(189, 189, 255, 0));
+        height: 100%;    
+        font-size: 1.2rem; 
+    }
+    .container-text{
+        grid-row: 2/8;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+    }
+    /* page-future */
+    #secction-future{ 
+        height: 100%;
+        grid-row: 4/13;
+    }
+    .cards-secction-future{
+        height: 100%;
+        font-size: 1rem;
     }
 }
 
 @media  (min-width: 900px) {
     .container-text{
-        font-size: 4rem;
+        justify-content: space-between;
+        grid-row: 2/7;
+        font-size: 3.5rem;
     }
     .container-secction{
         grid-row: 8/13;
@@ -71,7 +114,6 @@ h1,h2,h3,h4{
     .cards-secction{
         width: 25%;
         height: 80%;
-        clip-path: polygon(100% 25%, 100% 100%, 0 100%, 0 25%, 50% 0);
-        background-image: linear-gradient(rgb(255, 203, 203),rgba(189, 189, 255, 0));
+        font-size: 2rem;
     }
   }
