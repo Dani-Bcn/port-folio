@@ -1,20 +1,34 @@
-import React from 'react';
+import { React, useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion as m } from 'framer-motion'
+import BackPage from './BackPage';
+import ClickFooter from './ClickFooter';
 import Footer from './Footer';
 
 const Home = () => {
     const navigate = useNavigate()
     const workdsTitle = ["Welcome", "I'm Dani", "Chosse your theme"]
-    const cardsSecction = ["Pofessional", "Crazy", "Minimlist"]
+    const cardsSecction = ["Pofessional", "Crazy", "Minimalist"]
+    const [isOpen, setIsOpen] = useState(false)
+    const handleValues = () => {
+        setIsOpen(!isOpen)
 
+    }
+    useEffect(() => {
+          if (isOpen === true) {
+        document.getElementById("pages").style.filter = "grayscale(80%)"
+    }else{
+        document.getElementById("pages").style.filter = "grayscale(0)"
+    }
+    },[isOpen])
+  
     return (
-        <m.div className='container-pages' >
+        <m.div className='container-pages' id="pages">
             <m.div className='container-text'>
                 {
                     workdsTitle.map((e, i) => (
                         <m.h3 key={i}
-                           whileInView={{
+                            whileInView={{
                                 opacity: [0, 1],
                                 height: [0, 75],
                                 transition: {
@@ -38,8 +52,8 @@ const Home = () => {
                 {
                     cardsSecction.map((e, i) => (
                         <m.div key={i} className='cards-secction' onClick={() => navigate("/future")}
-                           whileInView={{
-                            opacity:[0,1],
+                            whileInView={{
+                                opacity: [0, 1],
                                 x: [50, 0],
                                 transition: {
                                     delay: 0.5 + i / 2.5,
@@ -60,7 +74,9 @@ const Home = () => {
                     ))
                 }
             </m.div>
-            <Footer/>
+            <BackPage />
+            <ClickFooter handleValues={handleValues} />
+            <Footer values={isOpen} />
         </m.div>
     );
 }

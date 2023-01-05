@@ -24,6 +24,7 @@ h4 {
     text-align: center;
     opacity: 0;
 }
+
 .App {
     width: 100vw;
     height: 100vh;
@@ -94,39 +95,67 @@ h4 {
 }
 
 /* Page footer */
-.container-footer {
+.click-footer-page {
     width: 100%;
     height: 100%;
-    grid-column: 13/14;
-    grid-row: 1/4;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: rgb(218, 233, 255);
-    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 0%);
-    opacity: 0;
-
+    grid-column: 12/14;
+    grid-row: 1/2;
+    background-color: rgba(255, 128, 0, 0.333);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+    cursor: pointer;
 }
 
-/* Page footer movile */
-
-.footer-movile {      
-    width: 100%;
-    height: 100%;
+.footer-page {
+    width: 500%;
+    margin-left: -300%;
+    height: 200%;
     grid-column: 10/14;
-    grid-row: 1/3;
-    justify-content: space-evenly;
-    background-color: rgb(250, 190, 100);
-    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 0%);
-    font-size: 0.8rem;
+    grid-row: 5/10;
+    background-color: rgba(255, 140, 0, 0.259);
+    backdrop-filter: blur(10px);
+    font-size: 2rem;
+
 }
 
-@media (max-width: 400px) {
-    .container-footer {
-        display: none;
-    }
+/* Back page */
+.back-page {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: rgba(255, 128, 0, 0.333);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    cursor: pointer;
 }
+
+
+
 
 @media (min-width: 400px) {
+
+    .click-footer-page {
+        grid-column: 13/14;
+        grid-row: 1/3;
+    }
+    .footer-page{
+        position: absolute;
+        top:0;
+        left:0;
+        grid-row: 3/10;
+        grid-column: 12/13;
+        margin-left: 10px;
+        height: 94%;
+        padding: 35px;
+        align-items: flex-start;
+        font-size: 1rem;
+        
+    }
+
+    .back-page {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
     .container-text {
         grid-row: 1/7;
         font-size: 1.8rem;
@@ -168,17 +197,17 @@ h4 {
 }
 
 @media (min-width: 900px) {
-    #movile {
-        display: none;
-    }
-
-    .container-footer {
-        display: flex;
+    .footer-page{
+        align-items: flex-start;
+        margin-left: -12.5px;      
+        grid-column: 13/14;
+        grid-row: 3/11;
     }
 
     .container-text {
         justify-content: space-between;
         grid-row: 1/8;
+
         font-size: 3.5rem;
     }
 

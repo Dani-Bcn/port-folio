@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion as m } from 'framer-motion'
-import Footer from './Footer';
-import FooterMovile from './FooterMovile';
+import BackPage from './BackPage';
+import ClickFooter from './ClickFooter';
 
 const Future = () => {
     const navigate = useNavigate()
@@ -58,7 +58,7 @@ const Future = () => {
                                 }
                             }}
                             exit={{
-                                opacity: [1,1, 0],
+                                opacity: [1, 1, 0],
                                 clipPath: ["polygon(0% 0%, 60% 0%, 100% 100%, 40% 100%)", "polygon(0% 0%, 0% 0%, 40% 100%, 40% 100%)"],
                                 transition: {
                                     duration: 0.5,
@@ -69,11 +69,9 @@ const Future = () => {
                         >{e}</m.div>
                     ))
                 }
-             
             </m.div>
-    <FooterMovile/>
-       
-
+            <ClickFooter />
+            <BackPage />
         </m.div>
     );
 }
