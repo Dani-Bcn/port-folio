@@ -5,11 +5,19 @@ const AbotmeFuture = () => {
         <div className='container-pages'>
             <div className='container-text'>
             <h2
-                style={{
-               
+                style={{  
+                        
                     opacity:1
                 }}
             >About me</h2>
+            </div>
+            <div className='container-secction'>
+                <div
+                    
+                ></div>
+                <p
+                 
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim sapiente tempore iste, amet illum numquam vel odio vitae placeat soluta, harum labore quis mollitia. Fuga blanditiis vel veritatis dolorum modi?</p>
             </div>
         </div>
     );

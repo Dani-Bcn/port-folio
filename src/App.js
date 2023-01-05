@@ -9,6 +9,9 @@ import AboutFuture from './components/AboutFuture'
 import ProyectsFuture from './components/ProyectsFuture';
 import SkillsFuture from './components/SkillsFuture';
 import DesignFuture from './components/DesignFuture';
+import FooterMovile from './components/FooterMovile';
+import Footer from './components/Footer';
+
 
 
 const App = () => {
@@ -22,7 +25,10 @@ const App = () => {
           <Route path='/proyectsfuture' element={<ProyectsFuture/>}/>     
           <Route path='/skillsfuture' element={<SkillsFuture/>}/>   
           <Route path='/designfuture' element={<DesignFuture/>}/>   
+         
+        
         </Routes>
+       
       </AnimatePresence>   
   );
 }

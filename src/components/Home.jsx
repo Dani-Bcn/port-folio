@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion as m } from 'framer-motion'
+import Footer from './Footer';
 
 const Home = () => {
     const navigate = useNavigate()
@@ -22,8 +23,12 @@ const Home = () => {
                                 }
                             }}
                             exit={{
-                                opacity: [1, 0, 0],
-                                height: [75, 0]
+                                opacity: [1, 0],
+                                height: [75, 0],
+                                transition: {
+                                    duration: 1.5,
+                                    ease: "circIn"
+                                }
                             }}
                         >{e}</m.h3>
                     ))
@@ -46,15 +51,16 @@ const Home = () => {
                                 opacity: [1, 0],
                                 x: [0, -100],
                                 transition: {
-                                    delay: 0.3 + i / 3,
-                                    duration: 0.5,
-                                    ease: "circOut"
+                                    delay: 0.3 + i / 2.5,
+                                    duration: 1,
+                                    ease: "circIn"
                                 }
                             }}
                         >{e}</m.div>
                     ))
                 }
             </m.div>
+            <Footer/>
         </m.div>
     );
 }
