@@ -96,7 +96,8 @@ div {
     grid-column: 2/12;
     grid-row: 3/12;
 }
-.images-proyects{
+
+.images-proyects {
     margin: 10px;
     background-color: rgba(184, 206, 216, 0.678);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -106,12 +107,11 @@ div {
     grid-column: 1/13;
     grid-row: 3/12;
     flex-direction: row;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 
-.cards-skills{
-    width:100px;
-   
+.cards-skills {
+    width: 100px;
     height: 100px;
     margin: 2px;
     background-color: wheat;

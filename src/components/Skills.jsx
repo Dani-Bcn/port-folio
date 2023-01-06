@@ -9,7 +9,7 @@ const Skills = () => {
             </div>
             <div className='container-secction-skills'>
                 {
-                    skills.map((e,i)=>(
+                    skills.map((e, i) => (
                         <div className='cards-skills'>img({e})</div>
                     ))
                 }
