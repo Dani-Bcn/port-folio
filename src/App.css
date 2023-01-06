@@ -8,46 +8,96 @@
 }
 
 html {
-    background-color: rgb(255, 238, 228);
+    background-color: rgb(77, 77, 77);
 }
 
 div {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container-home{
+.container-home {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,1fr);
-    background-color: rgb(38, 38, 38);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     color: rgb(245, 222, 179);
+    background-image: linear-gradient(rgb(52, 52, 52), rgba(0, 0, 255, 0));
 }
-.container-text-home{
-    width: 100%;
-    height: 100%;
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(240, 220, 182);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: 3;
+}
+
+.container-text-home {
     grid-column: 2/12;
     grid-row: 1/5;
     font-size: 2rem;
     align-items: flex-start;
 }
-.container-image-home{
-    width: 100%;
-    height: 100%;
+
+.container-image-home {
     grid-column: 1/13;
     grid-row: 5/13;
- 
-
 }
-.img-home{
-    width: 100%;
-    height: 100%;
+
+.img-home {
     background-image: url('./img/photo.png');
     background-size: cover;
     z-index: 2;
+}
 
+.container-pages {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    color: rgb(205, 186, 149);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    background-image: linear-gradient(rgb(52, 52, 52), rgba(0, 0, 255, 0));
+}
+
+.title-about {
+    grid-column: 2/12;
+    grid-row: 1/3;
+    font-size: 2.5rem;
+}
+
+.container-secction {
+    grid-column: 2/12;
+    grid-row: 3/7;
+    font-size: 1.5rem;
+}
+
+.container-image-about {
+    grid-column: 2/12;
+    grid-row: 8/12;
+}
+
+.image-about {
+    background-image: url('./img/ventana.png');
+    background-size: cover;
+    background-position-x: -50px;
+}
+
+.container-secction-proyects {
+    grid-column: 2/12;
+    grid-row: 3/12;
+}
+.images-proyects{
+    margin: 10px;
+    background-color: red;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
