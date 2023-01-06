@@ -7,7 +7,7 @@ import Home from './components/Home'
 import About from './components/About';
 import Nav from './components/Nav';
 import Proyects from './components/Proyects';
-
+import Skills from './components/Skills';
 const App = () => {
   const location = useLocation()
   return (
@@ -16,6 +16,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/proyects' element={<Proyects />} />
+        <Route path='/skills' element={<Skills />} />
       </Routes>
       <Nav />
     </AnimatePresence>

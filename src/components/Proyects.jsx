@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Proyects = () => {
-    const proyects=["Uno","Dos","tres"]
+    const proyects = ["Uno", "Dos", "tres"]
     return (
         <div className='container-pages'>
             <div className='title-about'>
@@ -9,11 +9,15 @@ const Proyects = () => {
             </div>
             <div className='container-secction-proyects'>
                 {
-                    proyects.map((e,i)=>(
-                        <div className='images-proyects' key={i}>{e}</div>
+                    proyects.map((e, i) => (
+                        <div>
+                            <h3 key={i}>{e}</h3>
+                            <div className='images-proyects'></div>
+                        </div>
+
                     ))
                 }
-                
+
             </div>
         </div>
     );

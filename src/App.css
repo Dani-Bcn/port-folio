@@ -98,6 +98,21 @@ div {
 }
 .images-proyects{
     margin: 10px;
-    background-color: red;
+    background-color: rgba(184, 206, 216, 0.678);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.container-secction-skills {
+    grid-column: 1/13;
+    grid-row: 3/12;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.cards-skills{
+    width:100px;
+   
+    height: 100px;
+    margin: 2px;
+    background-color: wheat;
 }
