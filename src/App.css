@@ -46,18 +46,18 @@ h4 {
 
 .container-text {
     width: 100%;
-    height: 75%;
+    height: 80%;
     display: grid;
     grid-column: 1/14;
-    grid-row: 1/5;
-    font-size: 1.5rem;
+    grid-row: 1/6;
+    font-size: 2rem;
 }
 
 .container-secction {
     width: 100%;
     height: 100%;
     grid-column: 2/13;
-    grid-row: 5/13;
+    grid-row: 5/14;
     justify-content: space-evenly;
 }
 
@@ -106,15 +106,15 @@ h4 {
 }
 
 .footer-page {
-    width: 500%;
-    margin-left: -300%;
-    height: 200%;
-    grid-column: 10/14;
-    grid-row: 5/10;
+    width: 120%;
+    height: 100%;
+    grid-column: 1/13;
+    grid-row: 2/13;
+    border-radius: 10px;
     background-color: rgba(255, 140, 0, 0.259);
     backdrop-filter: blur(10px);
     font-size: 2rem;
-
+    opacity: 0;
 }
 
 /* Back page */
@@ -128,27 +128,20 @@ h4 {
     cursor: pointer;
 }
 
-
-
-
 @media (min-width: 400px) {
 
     .click-footer-page {
         grid-column: 13/14;
         grid-row: 1/3;
     }
-    .footer-page{
-        position: absolute;
-        top:0;
-        left:0;
-        grid-row: 3/10;
-        grid-column: 12/13;
-        margin-left: 10px;
-        height: 94%;
-        padding: 35px;
-        align-items: flex-start;
-        font-size: 1rem;
-        
+    .footer-page{            
+        grid-row: 3/13;
+        grid-column: 12/14;
+        width: 100%;
+        height: 100%;
+        margin-left:15%;
+        align-items: center;
+        font-size: 1rem;        
     }
 
     .back-page {
@@ -164,7 +157,7 @@ h4 {
     }
 
     .container-secction {
-        grid-row: 7/12;
+        grid-row: 7/13;
         flex-direction: row;
     }
 
@@ -198,10 +191,10 @@ h4 {
 
 @media (min-width: 900px) {
     .footer-page{
-        align-items: flex-start;
-        margin-left: -12.5px;      
+        align-items: flex-start;      
         grid-column: 13/14;
-        grid-row: 3/11;
+        align-items: center;
+        grid-row: 3/13;
     }
 
     .container-text {
@@ -218,7 +211,7 @@ h4 {
 
     .cards-secction {
         width: 25%;
-        height: 80%;
+        height: 100%;
         font-size: 2rem;
     }
 

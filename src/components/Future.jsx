@@ -1,12 +1,16 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion as m } from 'framer-motion'
 import BackPage from './BackPage';
 import ClickFooter from './ClickFooter';
-
+import Footer from './Footer';
 const Future = () => {
     const navigate = useNavigate()
     const handleSecction = ["About me", "Proyects", "Skills", "Design 3d"]
+    const [isOpen, setIsOpen] = useState(false)
+    const handleValues = () => {
+        setIsOpen(!isOpen)
+    }
 
     const linksPages = ((i) => {
         switch (i) {
@@ -47,7 +51,7 @@ const Future = () => {
             <m.div className='container-secction' id='secction-future'>
                 {
                     handleSecction.map((e, i) => (
-                        <m.div key={i} className='cards-secction-future' onClick={() => linksPages(i)}
+                        <m.div key={i} className='cards-secction-future' onClick={() => (linksPages(i), setIsOpen(false))}
                             whileInView={{
                                 opacity: [0, 1],
                                 clipPath: ["polygon(0% 0%, 0% 0%, 40% 100%, 40% 100%)", "polygon(0% 0%, 60% 0%, 100% 100%, 40% 100%)"],
@@ -70,8 +74,9 @@ const Future = () => {
                     ))
                 }
             </m.div>
-            <ClickFooter />
             <BackPage />
+            <ClickFooter handleValues={handleValues} />
+            <Footer values={isOpen} />
         </m.div>
     );
 }

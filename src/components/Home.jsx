@@ -12,15 +12,7 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
     const handleValues = () => {
         setIsOpen(!isOpen)
-
     }
-    useEffect(() => {
-          if (isOpen === true) {
-        document.getElementById("pages").style.filter = "grayscale(80%)"
-    }else{
-        document.getElementById("pages").style.filter = "grayscale(0)"
-    }
-    },[isOpen])
   
     return (
         <m.div className='container-pages' id="pages">
@@ -51,7 +43,7 @@ const Home = () => {
             <m.div className='container-secction'>
                 {
                     cardsSecction.map((e, i) => (
-                        <m.div key={i} className='cards-secction' onClick={() => navigate("/future")}
+                        <m.div key={i} className='cards-secction' onClick={() => (navigate("/future"),setIsOpen(false))}
                             whileInView={{
                                 opacity: [0, 1],
                                 x: [50, 0],

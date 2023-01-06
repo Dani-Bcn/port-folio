@@ -1,8 +1,13 @@
-import React from 'react';
+import { React, useState, useEffect} from 'react';
 import BackPage from './BackPage';
 import ClickFooter from './ClickFooter';
+import Footer from './Footer';
 
 const SkillsFuture = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    const handleValues = () => {
+        setIsOpen(!isOpen)
+    }
     return (
         <div className='container-pages'>
             <div className='container-text'>
@@ -12,8 +17,9 @@ const SkillsFuture = () => {
                     }}
                 >Skills</h2>
             </div>
-            <BackPage/>
-            <ClickFooter />
+            <BackPage />
+            <ClickFooter handleValues={handleValues} />
+            <Footer values={isOpen} />
         </div>
     );
 }
