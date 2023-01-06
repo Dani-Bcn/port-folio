@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     overflow: hidden;
+    border: none;
 }
 
 html {
@@ -17,213 +18,36 @@ div {
     align-items: center;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    text-align: center;
-    opacity: 0;
-}
-
-.App {
+.container-home{
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    background-color: rgb(255, 238, 228);
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    background-color: rgb(38, 38, 38);
+    color: rgb(245, 222, 179);
 }
-
-
-.container-pages {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    background-color: rgb(255, 238, 228);
-}
-
-.container-text {
+.container-text-home{
     width: 100%;
-    height: 80%;
-    display: grid;
-    grid-column: 1/14;
-    grid-row: 1/6;
+    height: 100%;
+    grid-column: 2/12;
+    grid-row: 1/5;
     font-size: 2rem;
+    align-items: flex-start;
 }
-
-.container-secction {
+.container-image-home{
     width: 100%;
-    height: 100%;
-    grid-column: 2/13;
-    grid-row: 5/14;
-    justify-content: space-evenly;
-}
-
-.cards-secction {
-    width: 100%;
-    height: 25%;
-    background-image: linear-gradient(to right, rgb(255, 203, 203), rgba(189, 189, 255, 0));
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0;
-}
-
-/* Page furure */
-#secction-future {
-    font-family: 'Mulish', sans-serif;
-    grid-row: 4/13;
-}
-
-#text-future {
-    font-family: 'Mulish', sans-serif;
-    grid-row: 1/4;
-}
-
-.cards-secction-future {
-    width: 100%;
-    height: 24%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 128, 0, 0.333);
-    clip-path: polygon(0% 0%, 0% 0%, 40% 100%, 40% 100%);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Page footer */
-.click-footer-page {
-    width: 100%;
-    height: 100%;
-    grid-column: 12/14;
-    grid-row: 1/2;
-    background-color: rgba(255, 128, 0, 0.333);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
-    cursor: pointer;
-}
-
-.footer-page {
-    width: 120%;
     height: 100%;
     grid-column: 1/13;
-    grid-row: 2/13;
-    border-radius: 10px;
-    background-color: rgba(255, 140, 0, 0.259);
-    backdrop-filter: blur(10px);
-    font-size: 2rem;
-    opacity: 0;
-}
+    grid-row: 5/13;
+ 
 
-/* Back page */
-.back-page {
+}
+.img-home{
     width: 100%;
     height: 100%;
-    grid-column: 1/3;
-    grid-row: 1/2;
-    background-color: rgba(255, 128, 0, 0.333);
-    clip-path: polygon(0 0, 0 100%, 100% 0);
-    cursor: pointer;
-}
-
-@media (min-width: 400px) {
-
-    .click-footer-page {
-        grid-column: 13/14;
-        grid-row: 1/3;
-    }
-    .footer-page{            
-        grid-row: 3/13;
-        grid-column: 12/14;
-        width: 100%;
-        height: 100%;
-        margin-left:15%;
-        align-items: center;
-        font-size: 1rem;        
-    }
-
-    .back-page {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-
-    .container-text {
-        grid-row: 1/7;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .container-secction {
-        grid-row: 7/13;
-        flex-direction: row;
-    }
-
-    .cards-secction {
-        width: 25%;
-        height: 100%;
-        font-size: 1.2rem;
-    }
-
-    .container-footer {
-        display: none;
-    }
-
-    /* page-future */
-    #secction-future {
-        height: 100%;
-        grid-row: 7/12;
-    }
-
-    #text-future {
-        grid-row: 1/7;
-        height: 100%;
-        justify-content: center;
-    }
-
-    .cards-secction-future {
-        height: 100%;
-        font-size: 1rem;
-    }
-}
-
-@media (min-width: 900px) {
-    .footer-page{
-        align-items: flex-start;      
-        grid-column: 13/14;
-        align-items: center;
-        grid-row: 3/13;
-    }
-
-    .container-text {
-        justify-content: space-between;
-        grid-row: 1/8;
-
-        font-size: 3.5rem;
-    }
-
-    .container-secction {
-        grid-row: 8/13;
-        flex-direction: row;
-    }
-
-    .cards-secction {
-        width: 25%;
-        height: 100%;
-        font-size: 2rem;
-    }
-
-    #secction-future {
-        height: 100%;
-        grid-row: 7/12;
-    }
-
-    #text-future {
-        grid-row: 1/7;
-        height: 100%;
-        justify-content: center;
-    }
+    background-image: url('./img/photo.png');
+    background-size: cover;
+    z-index: 2;
 
 }
