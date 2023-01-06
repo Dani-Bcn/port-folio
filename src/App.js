@@ -8,6 +8,7 @@ import About from './components/About';
 import Nav from './components/Nav';
 import Proyects from './components/Proyects';
 import Skills from './components/Skills';
+import Design from './components/Design3d'
 const App = () => {
   const location = useLocation()
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/proyects' element={<Proyects />} />
         <Route path='/skills' element={<Skills />} />
+        <Route path='/design' element={<Design />} />
       </Routes>
       <Nav />
     </AnimatePresence>
