@@ -10,7 +10,7 @@ const Home = () => {
                 <h4>Full Stack Developer</h4>
             </div>
             <div className='container-image-home'>
-                <div
+                <div id="ball"
                     style={{
                         position: "absolute",
                         width: 350,

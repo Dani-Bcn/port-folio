@@ -32,13 +32,15 @@ div {
 
 .nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 65px;
-    height: 65px;
-    background-color: rgb(240, 220, 182);
-    clip-path: polygon(100% 0, 0 0, 100% 100%);
-    z-index: 3;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 215, 183, 0.461);
+    backdrop-filter: blur(3px);
+    clip-path: circle(50% at 50% 50%);
+    z-index: 2;
+    
 }
 
 .container-text-home {
@@ -116,3 +118,39 @@ div {
     margin: 2px;
     background-color: wheat;
 }
+
+/* Reponsive */
+
+@media (min-width: 400px) {
+    .container-image-home {
+        grid-column: 5/13;
+        grid-row: 1/13;
+        background-size: cover;
+    }
+    .container-text-home {
+        grid-column: 2/12;
+        grid-row: 3/11;
+        font-size: 2rem;
+        align-items: flex-start;
+    }
+    #ball{
+        margin-top:-250px;
+        margin-right: -50px;        
+    }
+  }
+  @media (min-width: 900px) {
+    .container-text-home {
+        font-size: 3.5rem;
+    }
+    #ball{
+        
+        padding: 75px;
+        margin-top:-200px;
+        right: 200px;
+    }
+    .container-image-home {
+        grid-column: 6/13;
+        grid-row: 1/13;
+        background-size: cover;
+    }
+  }

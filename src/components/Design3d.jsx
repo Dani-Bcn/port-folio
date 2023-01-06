@@ -10,7 +10,7 @@ const Design = () => {
             <div className='container-secction-skills'>
                 {
                     skills.map((e, i) => (
-                        <div className='cards-skills'>img({e})</div>
+                        <div key={i}className='cards-skills'>img({e})</div>
                     ))
                 }
             </div>
