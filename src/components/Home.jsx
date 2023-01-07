@@ -1,10 +1,23 @@
 import React from 'react';
+import { motion as m } from 'framer-motion'
 
 const Home = () => {
     return (
-        <div className='container-home'>
-            <div className='container-text-home'>
+        <m.div className='container-home'
+            animate={{
+                opacity: [0, 1],
+                transition: {
+                    duration: 1,
+                }
+            }}
+            exit={{
 
+                transition: {
+                    delay: 3,
+                    duration: 3,
+                }
+            }}>
+            <div className='container-text-home'>
                 <h2>I'm </h2>
                 <h2>Dani Pérez</h2>
                 <h4>Full Stack Developer</h4>
@@ -23,7 +36,7 @@ const Home = () => {
                 ></div>
                 <div className='img-home'></div>
             </div>
-        </div>
+        </m.div>
     );
 }
 

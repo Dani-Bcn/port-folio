@@ -10,8 +10,8 @@ const Proyects = () => {
             <div className='container-secction-proyects'>
                 {
                     proyects.map((e, i) => (
-                        <div>
-                            <h3 key={i}>{e}</h3>
+                        <div key={i}>
+                            <h3>{e}</h3>
                             <div className='images-proyects'></div>
                         </div>
 

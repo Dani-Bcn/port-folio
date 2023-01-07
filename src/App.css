@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color:rgb(255, 240, 229);
     list-style: none;
     overflow: hidden;
     border: none;
+   
 }
 
 html {
-    background-color: rgb(77, 77, 77);
+    background-image: linear-gradient(rgb(52, 52, 52), rgba(0, 0, 255, 0));
 }
+
 
 div {
     width: 100%;
@@ -41,6 +44,17 @@ div {
     clip-path: circle(50% at 50% 50%);
     z-index: 2;
     
+}
+.footer{
+    position: fixed;
+    bottom: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 215, 183, 0.461);
+    backdrop-filter: blur(3px);
+    clip-path: circle(50% at 50% 50%);
+    z-index: 2;
 }
 
 .container-text-home {
@@ -139,6 +153,12 @@ div {
     }
   }
   @media (min-width: 900px) {
+    .nav{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
     .container-text-home {
         font-size: 3.5rem;
     }

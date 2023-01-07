@@ -1,11 +1,11 @@
-import { React, useState } from 'react';
+import {React, useState} from 'react';
 import { motion as m } from 'framer-motion'
 import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
-  
-    const direcctions = ["/", "/about", "/proyects", "/skills", "/design"]
-    const linkss = ["Home", "About", "Proyects", "Skills", "Design"]
+const Footer = () => {
+    
+    const direcctions = ["https://www.linkedin.com/in/daniperezbnc/", "https://github.com/Dani-Bcn","https://www.domestika.org/es/nneodani",  "Contact"]
+    const linkss = ["Linkedin", "Github", "Domestika", "Contact"]
     const [isOpen, setIsOpen] = useState(false)
     const variantsLinks = {
         open: {
@@ -26,8 +26,8 @@ const Nav = () => {
     const variants = {
         open: {
             scale: 10,
-            x: "-185px",
-            y: "400px",
+            x: "185px",
+            y: "-400px",
             transition: {
                 duration: 1,
                 ease: "backInOut",
@@ -46,7 +46,7 @@ const Nav = () => {
         }
     }
     return (
-        <m.div className='nav' onClick={() => setIsOpen(!isOpen)}
+        <m.div className='footer' onClick={() => setIsOpen(!isOpen)}
             variants={variants}
             animate={isOpen ? "open" : "closed"}
             exit={{
@@ -67,11 +67,11 @@ const Nav = () => {
                         }}
                         variants={variantsLinks}
                         animate={isOpen ? "open" : "closed"}
-                    ><NavLink to={direcctions[i]} onClick={() => setIsOpen(!isOpen)}><h5  >{e}</h5></NavLink></m.div>
+                    ><a href={direcctions[i]} onClick={() => setIsOpen(!isOpen)}><h5  >{e}</h5></a></m.div>
                 ))
             }
         </m.div>
     )
 }
 
-export default Nav;
+export default Footer;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Design = () => {
-    const skills = ["Html", "Css", "JavaScript", "React", "Express", "Node", "MongoDb", "MongoAtlas", "Postman", "npm", "Github", "Git", "Heroku", "Cloudinary", "Netlify"]
+    const designs = ["Html", "Css", "JavaScript", "React", "Express", "Node", "MongoDb", "MongoAtlas", "Postman", "npm", "Github", "Git", "Heroku", "Cloudinary", "Netlify"]
     return (
         <div className='container-pages'>
             <div className='title-about'>
@@ -9,8 +9,8 @@ const Design = () => {
             </div>
             <div className='container-secction-skills'>
                 {
-                    skills.map((e, i) => (
-                        <div key={i}className='cards-skills'>img({e})</div>
+                    designs.map((e, i) => (
+                        <div key={i} className='cards-skills'>img({e})</div>
                     ))
                 }
             </div>
