@@ -8,6 +8,7 @@ import About from './components/About';
 import Proyects from './components/Proyects';
 import Skills from './components/Skills';
 import Design from './components/Design3d'
+import Navbar from './components/Navbar';
 const App = () => {
   const location = useLocation()
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/design' element={<Design />} />
         </Routes>
       </AnimatePresence>
+      <Navbar/>
      
 
 
