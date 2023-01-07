@@ -13,7 +13,6 @@ html {
     background-image: linear-gradient(rgb(52, 52, 52), rgba(0, 0, 255, 0));
 }
 
-
 div {
     width: 100%;
     height: 100%;
@@ -32,36 +31,21 @@ div {
     color: rgb(245, 222, 179);
     background-image: linear-gradient(rgb(52, 52, 52), rgba(0, 0, 255, 0));
 }
-
-.nav {
-    position: fixed;
-    top: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 215, 183, 0.461);
-    backdrop-filter: blur(3px);
-    clip-path: circle(50% at 50% 50%);
-    z-index: 2;
-    
+.container-links-footer{
+    width:20px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
 }
-.footer{
-    position: fixed;
-    bottom: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 215, 183, 0.461);
-    backdrop-filter: blur(3px);
-    clip-path: circle(50% at 50% 50%);
-    z-index: 2;
-}
-
 .container-text-home {
     grid-column: 2/12;
     grid-row: 1/5;
     font-size: 2rem;
     align-items: flex-start;
+    z-index: 3;
 }
 
 .container-image-home {
@@ -135,7 +119,20 @@ div {
 
 /* Reponsive */
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
+    .container-links-nav{
+        margin-top: -29px;
+        margin-left: -29px;
+        height: 20px;
+        font-size: 0.5rem;
+    }
+    .container-links-footer{
+        margin-top: 29px;
+        margin-left:29px;
+        height: 20px;
+        font-size: 0.5rem;
+    }
+ 
     .container-image-home {
         grid-column: 5/13;
         grid-row: 1/13;
@@ -162,8 +159,7 @@ div {
     .container-text-home {
         font-size: 3.5rem;
     }
-    #ball{
-        
+    #ball{        
         padding: 75px;
         margin-top:-200px;
         right: 200px;

@@ -5,11 +5,9 @@ import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import Home from './components/Home'
 import About from './components/About';
-import Nav from './components/Nav';
 import Proyects from './components/Proyects';
 import Skills from './components/Skills';
 import Design from './components/Design3d'
-import Footer from './components/Footer';
 const App = () => {
   const location = useLocation()
   return (
@@ -23,8 +21,9 @@ const App = () => {
           <Route path='/design' element={<Design />} />
         </Routes>
       </AnimatePresence>
-      <Nav />
-      <Footer />
+     
+
+
     </div>
 
 
