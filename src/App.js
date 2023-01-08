@@ -1,52 +1,62 @@
-import React from 'react';
-import { Routes, Route, Link, useLocation, NavLink } from "react-router-dom";
+import { React, useEffect } from 'react';
+import { Routes, Route, useLocation, } from "react-router-dom";
 import Scrollbar from 'smooth-scrollbar';
 
 import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import Home from './components/Home'
-import About from './components/About';
-import Proyects from './components/Proyects';
-import Skills from './components/Skills';
-import Design from './components/Design3d'
-import Navbar from './components/Navbar';
-import Xnav from './components/Xnav';
-import Footer from './components/Footer';
-import Xfooter from './components/Xfooter';
 
- const App = () => {
-   var options={
-      "damping":0.03
-   }
-    Scrollbar.init(document.querySelector('html'),options); 
+const App = () => {
+  useEffect(() => {
+    const options = {
+      "damping": 0.03
+    }
+    const navbar = document.querySelector('.container-nav')
+    const warning = document.getElementById('warning')
+    const scrollbar = Scrollbar.init(document.querySelector('html'), options)
+    scrollbar.addListener(status => {
+      const offset = status.offset
+      warning.style.top = 50 +offset.y + 'px'
+      navbar.style.top = offset.y + 'px'
+      warning.style.opacity = offset.y / 1000
+      document.getElementById('home').style.opacity = 1 - offset.y / 500
+    })
+    
+    console.log("La resolución de tu pantalla es: " + window.screen.width + " x " + window.screen.height)
+  }, [])
+
   const location = useLocation()
+  const nameLinks = ["Linkedin", "Github", "Domestika", "Contact"]
+  const links =["https://www.linkedin.com/in/daniperezbnc/","https://github.com/Dani-Bcn","https://www.domestika.org/es/nneodani",]
   return (
     <div>
+      <div className='container-nav' >
+        {
+          nameLinks.map((e, i) => (
+            <a key={i} href={links[i]}><h3 >{e}</h3></a>
+          ))
+        }
+      </div>
       <AnimatePresence className='App' initial={true}>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/proyects' element={<Proyects />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/design' element={<Design />} />
+
         </Routes>
       </AnimatePresence>
-      <Navbar />
-      <Xnav />
-      <Footer />
-      <Xfooter />
-          
-      <div
+
+
+      <div id='warning'
         style={{
           textAlign: "center",
           position: "absolute",
-          top: "0px",
+
           left: "0px",
           width: "120px",
           height: "25px",
           padding: "20px",
           fontSize: "1.2rem",
           backgroundColor: "red",
+          pinType: "fixed",
           zIndex: 5,
 
         }}
