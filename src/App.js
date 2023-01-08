@@ -9,10 +9,14 @@ import Proyects from './components/Proyects';
 import Skills from './components/Skills';
 import Design from './components/Design3d'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 const App = () => {
   const location = useLocation()
   return (
-    <div>
+    <div
+      style={{
+        overflow: "hidden"
+      }}>
       <AnimatePresence className='App' initial={true}>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
@@ -22,8 +26,23 @@ const App = () => {
           <Route path='/design' element={<Design />} />
         </Routes>
       </AnimatePresence>
-      <Navbar/>
-     
+      <Footer />
+      <Navbar />
+      <div
+        style={{
+          textAlign: "center",
+          position: "absolute",
+          top: "0px",
+          left: "0px",
+          width: "120px",
+          height: "25px",
+          padding: "20px",
+          fontSize: "1.2rem",
+          backgroundColor: "red",
+          zIndex: 5,
+
+        }}
+      >Under construction !</div>
 
 
     </div>

@@ -37,21 +37,7 @@ const Home = () => {
                 ></div>
                 <div className='img-home'></div>
             </div>
-            <div
-                style={{
-                    textAlign:"center",
-                    position:"absolute",
-                    top:"0px",
-                    left:"0px",
-                    width:"120px",
-                    height:"25px",
-                    padding:"20px",
-                    fontSize:"1.2rem",
-                    backgroundColor:"red",
-                    zIndex:5,
-                 
-                }}
-            >Under construction !</div>
+          
         </m.div>
     );
 }
