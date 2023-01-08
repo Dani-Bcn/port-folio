@@ -9,7 +9,10 @@ import Proyects from './components/Proyects';
 import Skills from './components/Skills';
 import Design from './components/Design3d'
 import Navbar from './components/Navbar';
+import Xnav from './components/Xnav';
 import Footer from './components/Footer';
+import Xfooter from './components/Xfooter';
+
 const App = () => {
   const location = useLocation()
   return (
@@ -26,8 +29,11 @@ const App = () => {
           <Route path='/design' element={<Design />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
       <Navbar />
+      <Xnav />
+      <Footer />
+      <Xfooter />
+      {/*       
       <div
         style={{
           textAlign: "center",
@@ -42,7 +48,7 @@ const App = () => {
           zIndex: 5,
 
         }}
-      >Under construction !</div>
+      >Under construction !</div> */}
 
 
     </div>
