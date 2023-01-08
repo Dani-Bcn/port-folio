@@ -1,8 +1,13 @@
 import React from 'react';
+import About from './About';
 import { motion as m } from 'framer-motion'
+import Skills from './Skills';
+import Design from './Design3d'
+import Proyects from './Proyects';
 
 const Home = () => {
     return (
+       <div>
         <m.div className='container-home'
             animate={{
                 opacity: [0, 1],
@@ -37,8 +42,14 @@ const Home = () => {
                 ></div>
                 <div className='img-home'></div>
             </div>
-          
-        </m.div>
+         
+        </m.div> 
+        <About/>
+        <Proyects/>
+        <Skills/>
+        <Design/>
+        
+        </div>
     );
 }
 

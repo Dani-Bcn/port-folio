@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link, useLocation, NavLink } from "react-router-dom";
+import Scrollbar from 'smooth-scrollbar';
 
 import { AnimatePresence } from 'framer-motion'
 import './App.css'
@@ -13,13 +14,14 @@ import Xnav from './components/Xnav';
 import Footer from './components/Footer';
 import Xfooter from './components/Xfooter';
 
-const App = () => {
+ const App = () => {
+   var options={
+      "damping":0.03
+   }
+    Scrollbar.init(document.querySelector('html'),options); 
   const location = useLocation()
   return (
-    <div
-      style={{
-        overflow: "hidden"
-      }}>
+    <div>
       <AnimatePresence className='App' initial={true}>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
@@ -33,7 +35,7 @@ const App = () => {
       <Xnav />
       <Footer />
       <Xfooter />
-      {/*       
+          
       <div
         style={{
           textAlign: "center",
@@ -48,7 +50,7 @@ const App = () => {
           zIndex: 5,
 
         }}
-      >Under construction !</div> */}
+      >Under construction !</div>
 
 
     </div>

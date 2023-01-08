@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skills = () => {
-    const skills = ["coco"]
+    const skills = ["Html", "Css", "JavaScript", "React", "Express", "Node", "MongoDb", "MongoAtlas", "Postman", "npm", "Github", "Git", "Heroku", "Cloudinary", "Netlify"]
     return (
         <div className='container-pages'>
             <div className='title-about'>

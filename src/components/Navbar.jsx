@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const variantsNav = {
         open: {
-            clipPath: "circle(139.9% at 99% 1%)",
+            clipPath: "circle(15% at 100% 0%)",
             backdropFilter: "blur(10px)",
             transition: {
                 duration: 1,
@@ -17,7 +17,7 @@ const Navbar = () => {
         },
         closed: {
             overFlow: "hidden",
-            clipPath: "circle(10% at 100% 0%)",
+            clipPath: "circle(3% at 100% 0%)",
             backdropFilter: "blur(0px)",
             transition: {
                 delay: 0.7,

@@ -11,7 +11,7 @@ const Proyects = () => {
                 {
                     proyects.map((e, i) => (
                         <div key={i}>
-                            <h3>{e}</h3>
+                            
                             <div className='images-proyects'></div>
                         </div>
 

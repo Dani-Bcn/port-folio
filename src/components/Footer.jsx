@@ -8,7 +8,7 @@ const Footer = () => {
     const [isOpen, setIsOpen] = useState(false)
     const variantsNav = {
         open: {
-            clipPath: "circle(141.4% at 0 100%)",
+            clipPath: "circle(35% at 0 100%)",
             backdropFilter: "blur(10px)",
             transition: {
                 duration: 1,
@@ -17,7 +17,7 @@ const Footer = () => {
         },
         closed: {
             overFlow: "hidden",
-            clipPath: "circle(10% at 0 100%)",
+            clipPath: "circle(3% at 0 100%)",
             backdropFilter: "blur(0px)",
             transition: {
                 delay: 0.7,

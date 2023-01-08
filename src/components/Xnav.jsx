@@ -7,8 +7,8 @@ const Xnav = () => {
     return (
         <div>
             {
-                stiks.map((e) => (
-                    <div className='xnav'
+                stiks.map((e,i) => (
+                    <div className='xnav' key={i}
                         style={{
                             marginTop:`${e}px`
                         }}

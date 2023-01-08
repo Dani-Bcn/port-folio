@@ -6,8 +6,8 @@ const Xfooter = () => {
     return (
         <div>
             {
-                stiks.map((e) => (
-                    <div className='xfooter'
+                stiks.map((e,i) => (
+                    <div className='xfooter' key={i}
                         style={{
                             marginBottom:`${e}px`
                         }}
