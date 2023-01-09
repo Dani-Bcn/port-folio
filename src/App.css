@@ -115,11 +115,23 @@ div {
 /* Page proyects */
 .images-proyects {
     overflow: hidden;
-    margin: 10px;
+    position: absolute;
+    height: 90%;
+    margin: 20px;
     background-color: rgba(184, 206, 216, 0.678);
     background-size: cover;
     background-position-y: -120px;
 }
+
+.back-images-proyects{
+    height: 90%;
+    margin: 20px;
+    position:absolute;
+    background-color: red;
+    z-index:1;
+}
+
+/* Page skills */
 
 .container-secction-skills {
     grid-column: 1/13;
@@ -147,6 +159,19 @@ div {
 /* Reponsive */
 
 @media (min-width: 481px) {
+    .images-proyects {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position-y: 220px;
+    }
+    .back-images-proyects{
+        width: 200px;
+        height: 200px;
+        position:absolute;
+        background-color: red;
+        z-index:1;
+    }
     .container-secction-proyects {
         flex-direction: row;
     }
@@ -171,14 +196,21 @@ div {
 }
 
 @media (min-width: 900px) {
-
-    nav {
-        display: none;
+    .images-proyects {
+        width: 350px;
+        height: 350px;
+        background-size: cover;
+        background-position-y: 220px;
     }
-
-    .footer {
-        display: none;
+    .back-images-proyects{
+        width: 350px;
+        height: 350px;
+        position:absolute;
+        background-color: red;
+        z-index:1;
     }
+   
+    
 
     .container-text-home {
         font-size: 3.5rem;

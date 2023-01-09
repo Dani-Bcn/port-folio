@@ -6,47 +6,47 @@ const Navbar = () => {
     const nameLinks = ["Linkedin", "Github", "Domestika", "Contact"]
     const links = ["https://www.linkedin.com/in/daniperezbnc/", "https://github.com/Dani-Bcn", "https://www.domestika.org/es/nneodani", "/contact"]
     const [isOpen, setIsOpen] = useState(false)
- 
+
     const arraySticks = [5, 5, 5]
 
     const variantsnav = {
-        
+
         open: {
             x: 0,
-            opacity:  1,
-            transition:{
-                duration:0.5
+            opacity: 1,
+            transition: {
+                duration: 0.5
             }
         },
         closed: {
-            x: -500,
-            opacity:  0,
+            x: -1200,
+            opacity: 0,
             transition: {
-                duration:0.5,
+                duration: 0.5,
                 delay: 0.5
             }
         }
     }
     const variantsH3 = {
-        open: {         
+        open: {
             x: 0,
             transition: {
-                duration:0.5,
+                duration: 0.5,
                 delay: 0.5
             }
         },
-        closed: {         
-            x:  -700,
+        closed: {
+            x: -700,
             transition: {
-                duration:0.5,               
+                duration: 0.5,
             }
         }
     }
     const variantsSticks = {
-        open: {           
+        open: {
             rotate: 90,
         },
-        closed: {           
+        closed: {
             rotate: 0,
         }
     }
@@ -57,23 +57,22 @@ const Navbar = () => {
                 animate={
                     isOpen ? "open" : "closed"
                 }>
-                    <div className='card-nav'>
-                {
-                    nameLinks.map((e, i) => (
-                        <a key={i} href={links[i]}><m.h3
-                            variants={variantsH3}
-                            animate={
-                                isOpen ? "open" : "closed"
-                            }
-                          
-                        >{e}</m.h3></a>
-                    ))
-                }
+                <div className='card-nav'>
+                    {
+                        nameLinks.map((e, i) => (
+                            <a key={i} href={links[i]}><m.h3
+                                variants={variantsH3}
+                                animate={
+                                    isOpen ? "open" : "closed"
+                                }
+                            >{e}</m.h3></a>
+                        ))
+                    }
                 </div>
             </m.div>
             <m.div id="sticks" onClick={() => setIsOpen(!isOpen)}
                 style={{
-                    position: "fixed",                    
+                    position: "fixed",
                     top: 0,
                     right: 0,
                     width: 50,
