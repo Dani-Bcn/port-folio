@@ -1,61 +1,53 @@
 import { React, useEffect, useState } from 'react';
 import { motion as m } from 'framer-motion'
-import Scrollbar from 'smooth-scrollbar';
 
 
 const Navbar = () => {
     const nameLinks = ["Linkedin", "Github", "Domestika", "Contact"]
     const links = ["https://www.linkedin.com/in/daniperezbnc/", "https://github.com/Dani-Bcn", "https://www.domestika.org/es/nneodani", "/contact"]
     const [isOpen, setIsOpen] = useState(false)
-    useEffect(() => {
-        const options = {
-            "damping": 0.03
-        }
-        const navbar = document.querySelector('.container-nav')
-        const sticks = document.querySelector('#sticks')
-        const scrollbar = Scrollbar.init(document.querySelector('html'), options)
-        scrollbar.addListener(status => {
-            const offset = status.offset
-            navbar.style.top = offset.y + 'px'
-            sticks.style.top = offset.y + 'px'
-            console.log(offset.y)
-        })
-
-    })
+ 
     const arraySticks = [5, 5, 5]
 
     const variantsnav = {
+        
         open: {
-            x: [-500, 0],
-            opacity: [0, 1],
+            x: 0,
+            opacity:  1,
+            transition:{
+                duration:0.5
+            }
         },
         closed: {
-            x: [0, -500],
-            opacity: [1, 0],
+            x: -500,
+            opacity:  0,
             transition: {
+                duration:0.5,
                 delay: 0.5
             }
         }
     }
     const variantsH3 = {
-        open: {
-            y: [-500, 0],
+        open: {         
+            x: 0,
             transition: {
+                duration:0.5,
                 delay: 0.5
             }
         },
-        closed: {
-            y: [0, -500]
+        closed: {         
+            x:  -700,
+            transition: {
+                duration:0.5,               
+            }
         }
     }
     const variantsSticks = {
-        open: {
+        open: {           
             rotate: 90,
-
         },
-        closed: {
+        closed: {           
             rotate: 0,
-
         }
     }
     return (
@@ -81,7 +73,7 @@ const Navbar = () => {
             </m.div>
             <m.div id="sticks" onClick={() => setIsOpen(!isOpen)}
                 style={{
-                    position: "absolute",
+                    position: "fixed",                    
                     top: 0,
                     right: 0,
                     width: 50,

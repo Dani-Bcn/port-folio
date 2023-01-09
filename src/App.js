@@ -8,21 +8,8 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 
 const App = () => {
-  useEffect(() => {
-    const options = {
-      "damping": 0.03
-    }
 
-    const warning = document.getElementById('warning')
-    const scrollbar = Scrollbar.init(document.querySelector('html'), options)
-    scrollbar.addListener(status => {
-      const offset = status.offset
-      warning.style.top = 50 + offset.y + 'px'
-      warning.style.opacity = offset.y / 1000
-      document.getElementById('home').style.opacity = 1 - offset.y / 500
-
-    })
-  },[])
+console.log(window.status)
   const location = useLocation()
 
   return (
@@ -38,7 +25,8 @@ const App = () => {
       <div id='warning'
         style={{
           textAlign: "center",
-          position: "absolute",
+          position: "fixed",
+          top:0,
           left: "0px",
           width: "120px",
           height: "25px",
