@@ -6,11 +6,8 @@ const Navbar = () => {
     const nameLinks = ["Linkedin", "Github", "Domestika", "Contact"]
     const links = ["https://www.linkedin.com/in/daniperezbnc/", "https://github.com/Dani-Bcn", "https://www.domestika.org/es/nneodani", "/contact"]
     const [isOpen, setIsOpen] = useState(false)
-
     const arraySticks = [5, 5, 5]
-
     const variantsnav = {
-
         open: {
             x: 0,
             opacity: 1,
@@ -19,7 +16,7 @@ const Navbar = () => {
             }
         },
         closed: {
-            x: -1200,
+            x: -1500,
             opacity: 0,
             transition: {
                 duration: 0.5,

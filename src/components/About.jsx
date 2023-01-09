@@ -2,15 +2,11 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='container-pages'>
-            <div className='title-about'>
-                <h2>About me</h2>
-            </div>
-            <div className='container-secction'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic modi error cumque deleniti adipisci perspiciatis velit minus officiis odit dolore alias molestias soluta fugit quibusdam porro, reprehenderit, fugiat eius!</p>
-            </div>
-            <div className='container-image-about'>
-                <div className='image-about'></div>
+        <div  className='container-about'>
+           <h2 className='title-about'>About</h2>
+            <div className='container-secction-about'>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis cum unde rem quo esse pariatur enim ad, iste ipsa doloribus? Laboriosam, harum. Harum eos, eius ipsam asperiores pariatur temporibus!</p>
+        <div className='image-about'></div>
             </div>
         </div>
     );
